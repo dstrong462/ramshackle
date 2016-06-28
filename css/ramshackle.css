@@ -1,0 +1,449 @@
+/*
+* Ramshackle v0.8
+* Copyright 2016, Daniel Strong
+* www.getramshackle.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/22/2016
+*/
+
+/*  TABLE OF CONTENTS
+==================================
+
+- Blanket Settings
+- The Grid
+- Default Element Styling
+- Type Styling
+- Buttons
+- Forms & Inputs
+- Code
+- Lists
+- Misc Tools
+- Clearfix
+- Grid Styling
+- Media Queries
+- Font Declarations
+- Color Palette
+
+================================ */
+
+/*  BLANKET SETTINGS
+================================ */
+
+* { box-sizing: border-box; }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/*  OUTLINES FOR TROUBLESHOOTING
+================================== */
+
+/*.main-container { outline: 1px solid yellow; }*/
+/*.grid-container { outline: 1px solid green; }
+.row { outline: 1px solid blue; }
+.col { outline: 1px solid red; }*/
+
+/*  SINGLE USE THINGS
+================================== */
+
+.splash {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #fafafa 0%, #cacaca 100%);
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*  THE GRID
+================================== */
+
+.hero {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    /*background-image: url('../img/photo-1453227588063-bb302b62f50b.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main-container {
+    width: 100%;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.grid-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    padding: 0;
+    margin: 2% 0;
+}
+
+.col {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 25px;
+    margin: 0 2% 0 0;
+}
+
+/* Use this if you want to turn a column into a row */
+.col-row {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.row:first-of-type { margin-top: 0; }
+.col:first-child { margin-left: 0; }
+.col:last-child { margin-right: 0; }
+
+/* Use on an element to align content to CENTER */
+.center {
+    text-align: center;
+    vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Use on a row to align columns to CENTER */
+.center .col {
+    display: inline-block;
+    float: none;
+}
+
+/* Use on an element to align content to LEFT */
+.left {
+    text-align: left;
+}
+
+/* Use on a row to align columns to LEFT */
+.left .col {
+    display: inline-block;
+    float: left;
+}
+
+/* Use on an element to align content to RIGHT */
+.right {
+    text-align: right;
+}
+
+/* Use on a row to align columns to RIGHT */
+.right .col {
+    display: inline-block;
+    float: right;
+}
+
+/*  DEFAULT ELEMENT STYLING
+================================== */
+
+body {
+    font-size: 1em;
+    line-height: 1.7em;
+}
+
+hr {
+    border-width: 0;
+    border-top: 1px solid #fafafa;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*  TYPE STYLING
+================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    line-height: 1.3em;
+    margin: 0 0 .4em 0;
+}
+
+h1 { font-size: 3.8em; }
+h2 { font-size: 3.3em; }
+h3 { font-size: 2.8em; }
+h4 { font-size: 2.3em; }
+h5 { font-size: 1.8em; }
+h6 { font-size: 1.3em; }
+
+/*  BUTTONS
+================================== */
+
+.button {
+    display: inline-block;
+    color: #fff;
+    font-size: .85em;
+    letter-spacing: .25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,.22);
+    padding: 17px 45px;
+    margin: 5px;
+    transition: .25s;
+}
+
+.button:hover {
+    animation: pulse 1s ease-out infinite;
+    box-shadow: 0 0 10px rgba(255,255,255, .5) inset;
+}
+
+@keyframes pulse {
+    0% { color: #fff; }
+    40% { color: rgba(255,255,255,.2); }
+    85% { color: #fff; }
+    100% { color: #fff; }
+}
+
+/*  FORMS AND INPUTS
+================================== */
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+    box-sizing: border-box;
+    box-shadow: none;
+    font-size: 1.15em;
+    background-color: #fafafa;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 4px 0 0 0;
+}
+
+label {
+    font-weight: 600;
+    letter-spacing: -1px;
+    cursor: default;
+    margin-left: 2px;
+}
+
+
+textarea {
+    min-height: 100px;
+    max-height: 600px;
+    padding: 10px;
+}
+
+/*  CODE
+================================== */
+
+code {
+    display: inline-block;
+    font-size: 90%;
+    color: #000;
+    white-space: normal;
+    background-color: #dedede;
+    border-radius: 4px;
+    padding: .1em .6em;
+    margin: .15em .3em;
+}
+
+pre > code {
+    display: inline-block;
+    word-wrap: break-word;
+    padding: 1.5em;
+}
+
+/*  LISTS
+================================== */
+
+ul { list-style: circle; }
+ol { list-style: decimal; }
+
+li {
+    margin-bottom: .75em;
+    padding-left: .75em;
+}
+
+/*  MISC TOOLS
+================================== */
+
+/* These give elements some vertical room to breathe */
+.v-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.v-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* These give elements some horizontal room to breathe */
+.h-25 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.h-50 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.flush {
+    padding: 0;
+}
+
+.v-flush {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.h-flush {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*  CLEAR FIX
+================================ */
+
+.main-container,
+.grid-container,
+.row,
+.center,
+.left,
+.right {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*  GRID STYLING
+================================== */
+
+.box {
+    background-color: #fafafa;
+    box-shadow: 0 0 15px rgba(0,0,0,.25);
+}
+
+/*  MEDIA QUERY BREAKPOINTS
+================================== */
+
+/* For screens larger than 768px wide */
+@media (min-width: 769px) {
+    .one { width: 8.2%; }
+    .two { width: 18.4%; }
+    .three { width: 28.6%; }
+    .four { width: 38.8%; }
+    .five { width: 49%; }
+    .six { width: 59.2%; }
+    .seven { width: 69.4%; }
+    .eight { width: 79.6%; }
+    .nine { width: 89.8%; }
+    .ten { width: 100%; margin-left: 0; margin-right: 0; }
+
+    .quarter, .one-quarter { width: 23.5%; }
+    .third, .one-third { width: 32%; }
+    .half, .one-half { width: 49%; }
+    .two-thirds { width: 66%; }
+    .three-quarters { width: 74.5%; }
+    .full { width: 100%; margin-left: 0; margin-right: 0; }
+}
+
+/* For screens smaller than 768px wide */
+@media (min-width: 481px) and (max-width: 768px) {
+    .grid-container {
+        width: 98%;
+        margin: 0 auto;
+    }
+    .row { margin: 0 auto; }
+    .col-row { margin: 0 auto; }
+    .col { margin: 1% auto; }
+}
+
+/* For screens smaller than 480px wide */
+@media (max-width: 480px) {
+    .grid-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .row { margin: 0 auto; }
+    .col-row { margin: 0 auto; }
+    .col { margin: 2% auto; }
+    h1 { font-size: 3.4em; }
+    h2 { font-size: 2.9em; }
+    h3 { font-size: 2.4em; }
+    h4 { font-size: 2em; }
+    h5 { font-size: 1.4em; }
+    h6 { font-size: 1em; }
+}
+
+/*  FONT DECLARATIONS
+================================== */
+
+* { font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*  COLOR PALETTE
+================================== */
+
+/* These control your TEXT colors */
+/*body { color: #424242; }
+.dark { color: #424242; }
+.light { color: #dedede; }
+.primary { color: #ff5f66; }
+.secondary { color: #ffbc55; }
+.accent { color: #66abf7; }
+
+/* These control your BACKGROUND colors */
+/*.bg-dark { background-color: #424242; }
+.bg-light { background-color: #dedede; }
+.bg-primary { background-color: #ff5f66; }
+.bg-secondary { background-color: #ffbc55; }
+.bg-accent { background-color: #66abf7; }*/
+
+/* These control the fill of your inline SVG images */
+/*.svg-dark { fill: #424242; }
+.svg-light { fill: #dedede; }
+.svg-primary { fill: #ff5f66; }
+.svg-secondary { fill: #ffbc55; }
+.svg-accent { fill: #66abf7; }*/
+
+/*.orange-red-grad {
+    box-sizing: padding-box;
+    background: linear-gradient(#ffbc55, #ff5f66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/
+
+
+/*
+add font weight 600 for open sans
+
+*/
