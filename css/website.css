@@ -77,6 +77,13 @@ body { color: #000; }
 .svg-accent { fill: #dedede; }
 
 @media (max-width: 480px) {
-    #intro { padding: 15px; }
+    #intro {
+        padding: 15px;
+        color: #fff;
+    }
     .small-grid-container { width: 96%; }
+    .header { background-position: center bottom; }
+    .top-round,
+    .bottom-round,
+    .both-round { border-radius: 0; }
 }
