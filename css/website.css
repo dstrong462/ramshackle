@@ -1,0 +1,82 @@
+/*  SINGLE USE THINGS
+================================== */
+
+body { background-color: #353535; }
+
+.header {
+    background-image:
+        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(43,196,173,.6) 100%),
+        url('../img/photo-1453227588063-bb302b62f50b-bw2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    text-align: center;
+}
+
+.top-round { border-radius: 25px 25px 0 0; }
+.bottom-round { border-radius: 0 0 25px 25px; }
+.both-round { border-radius: 25px; }
+
+
+#intro {
+    max-width: 515px;
+    padding: 70px 35px;
+}
+
+.svg-about {
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.svg-responsive {
+    max-width: 230px;
+    margin: 0 auto;
+}
+
+.small-grid-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+.small-box {
+    background-color: #fafafa;
+    box-shadow: 0 0 15px rgba(0,0,0,.25);
+    border-radius: 4px;
+    padding: 7px;
+}
+
+.result { padding: 10px; }
+
+.outline { border: 1px solid #dedede; }
+
+
+/* These control your TEXT colors */
+body { color: #000; }
+.dark { color: #262626; }
+.light { color: #fff; }
+.primary { color: #2BC4AD; }
+.secondary { color: #2B977E; }
+.accent { color: #dedede; }
+
+/* These control your BACKGROUND colors */
+.bg-superdark { background-color: #262626; }
+.bg-dark { background-color: #353535; }
+.bg-light { background-color: #fff; }
+.bg-primary { background-color: #2BC4AD; }
+.bg-secondary { background-color: #2B977E; }
+.bg-accent { background-color: #dedede; }
+
+/* These control the fill of your inline SVG images */
+.svg-dark { fill: #262626; }
+.svg-light { fill: #fff; }
+.svg-primary { fill: #2BC4AD; }
+.svg-secondary { fill: #2B977E; }
+.svg-accent { fill: #dedede; }
+
+@media (max-width: 480px) {
+    #intro { padding: 15px; }
+    .small-grid-container { width: 96%; }
+}
