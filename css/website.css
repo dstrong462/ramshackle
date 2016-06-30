@@ -13,9 +13,9 @@ body { background-color: #353535; }
     text-align: center;
 }
 
-.top-round { border-radius: 25px 25px 0 0; }
-.bottom-round { border-radius: 0 0 25px 25px; }
-.both-round { border-radius: 25px; }
+.top-round { border-radius: 15px 15px 0 0; }
+.bottom-round { border-radius: 0 0 15px 15px; }
+.both-round { border-radius: 15px; }
 
 
 #intro {
@@ -52,6 +52,41 @@ body { background-color: #353535; }
 
 .outline { border: 1px solid #dedede; }
 
+/* Single use row and col that are exempt from media queries */
+.e-row {
+    width: 100%;
+    padding: 0;
+    margin: 2% 0;
+}
+
+.e-col {
+    float: left;
+    width: 100%;
+    text-align: left;
+    margin: 0 2% 0 0;
+}
+
+.e-row:first-of-type { margin-top: 0; }
+.e-col:first-child { margin-left: 0; }
+.e-col:last-child { margin-right: 0; }
+
+/* Single use grid that is exempt from media queries */
+.e-one { width: 8.2%; }
+.e-two { width: 18.4%; }
+.e-three { width: 28.6%; }
+.e-four { width: 38.8%; }
+.e-five { width: 49%; }
+.e-six { width: 59.2%; }
+.e-seven { width: 69.4%; }
+.e-eight { width: 79.6%; }
+.e-nine { width: 89.8%; }
+.e-ten { width: 100%; margin-left: 0; margin-right: 0; }
+.e-quarter { width: 23.5%; }
+.e-third { width: 32%; }
+.e-half { width: 49%; }
+.e-two-thirds { width: 66%; }
+.e-three-quarters { width: 74.5%; }
+.e-full { width: 100%; margin-left: 0; margin-right: 0; }
 
 /* These control your TEXT colors */
 body { color: #000; }
@@ -76,14 +111,26 @@ body { color: #000; }
 .svg-secondary { fill: #2B977E; }
 .svg-accent { fill: #dedede; }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    #intro { margin: 0 auto; }
+    .small-grid-container { width: 90%; }
+}
+
 @media (max-width: 480px) {
     #intro {
-        padding: 15px;
         color: #fff;
+        padding: 15px;
     }
-    .small-grid-container { width: 96%; }
+    .small-grid-container { width: 100%; }
     .header { background-position: center bottom; }
-    .top-round,
-    .bottom-round,
-    .both-round { border-radius: 0; }
+    .small-box {
+        font-size: .85em;
+        padding: 3px;
+    }
+}
+
+.e-row {
+    content: '';
+    display: table;
+    clear: both;
 }
