@@ -5,7 +5,7 @@ body { background-color: #353535; }
 
 .header {
     background-image:
-        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(43,196,173,.6) 100%),
+        linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(43,196,173,.5) 100%),
         url('../img/photo-1453227588063-bb302b62f50b-bw2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@ body { color: #000; }
 .dark { color: #262626; }
 .light { color: #fff; }
 .primary { color: #2BC4AD; }
-.secondary { color: #2B977E; }
+.secondary { color: #289784; }
 .accent { color: #dedede; }
 
 /* These control your BACKGROUND colors */
@@ -101,14 +101,14 @@ body { color: #000; }
 .bg-dark { background-color: #353535; }
 .bg-light { background-color: #fff; }
 .bg-primary { background-color: #2BC4AD; }
-.bg-secondary { background-color: #2B977E; }
+.bg-secondary { background-color: #289784; }
 .bg-accent { background-color: #dedede; }
 
 /* These control the fill of your inline SVG images */
 .svg-dark { fill: #262626; }
 .svg-light { fill: #fff; }
 .svg-primary { fill: #2BC4AD; }
-.svg-secondary { fill: #2B977E; }
+.svg-secondary { fill: #289784; }
 .svg-accent { fill: #dedede; }
 
 @media (min-width: 481px) and (max-width: 768px) {
