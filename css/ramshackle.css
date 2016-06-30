@@ -214,10 +214,10 @@ h6 { font-size: 1.3em; }
 }
 
 @keyframes pulse {
-    0% { color: #fff; }
+    0% {  }
     40% { color: rgba(255,255,255,.2); }
-    85% { color: #fff; }
-    100% { color: #fff; }
+    85% {  }
+    100% {  }
 }
 
 /*  FORMS AND INPUTS
