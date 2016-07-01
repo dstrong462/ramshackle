@@ -151,8 +151,7 @@ body { color: #000; }
 }
 
 @media (max-width: 480px) {
-    #nav-about,
-    #nav-syntax { display: none !important; }
+    #navbar { display: none !important; }
     #intro {
         color: #fff;
         padding: 15px;
