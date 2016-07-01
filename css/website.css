@@ -3,6 +3,46 @@
 
 body { background-color: #353535; }
 
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    height: 40px;
+    font-size: .85em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #353535;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 100;
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#navbar ul li {
+    display: inline-block;
+    list-style-type: none;
+    line-height: 40px;
+    padding: 0;
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: #bbb;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#navbar ul li a:hover {
+    color: #fff;
+}
+
 .header {
     background-image:
         linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(43,196,173,.5) 100%),
@@ -50,7 +90,7 @@ body { background-color: #353535; }
 
 .result { padding: 10px; }
 
-.outline { border: 1px solid #dedede; }
+.outline { border: 1px solid #555; }
 
 /* Single use row and col that are exempt from media queries */
 .e-row {
@@ -90,33 +130,29 @@ body { background-color: #353535; }
 
 /* These control your TEXT colors */
 body { color: #000; }
-.dark { color: #262626; }
+.dark { color: #353535; }
 .light { color: #fff; }
-.primary { color: #2BC4AD; }
-.secondary { color: #289784; }
+.primary { color: #289784; }
+.secondary { color: #84dacb; }
 .accent { color: #dedede; }
 
 /* These control your BACKGROUND colors */
-.bg-superdark { background-color: #262626; }
 .bg-dark { background-color: #353535; }
 .bg-light { background-color: #fff; }
-.bg-primary { background-color: #2BC4AD; }
-.bg-secondary { background-color: #289784; }
+.bg-primary { background-color: #289784; }
+.bg-secondary { background-color: #84dacb; }
 .bg-accent { background-color: #dedede; }
 
-/* These control the fill of your inline SVG images */
-.svg-dark { fill: #262626; }
-.svg-light { fill: #fff; }
-.svg-primary { fill: #2BC4AD; }
-.svg-secondary { fill: #289784; }
-.svg-accent { fill: #dedede; }
-
 @media (min-width: 481px) and (max-width: 768px) {
+    #nav-about,
+    #nav-syntax { display: none !important; }
     #intro { margin: 0 auto; }
     .small-grid-container { width: 90%; }
 }
 
 @media (max-width: 480px) {
+    #nav-about,
+    #nav-syntax { display: none !important; }
     #intro {
         color: #fff;
         padding: 15px;

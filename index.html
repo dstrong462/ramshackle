@@ -14,6 +14,18 @@
 </head>
 
 <body>
+    <div id="navbar">
+        <ul>
+            <li><a href="#top">top</a></li>
+            <li id="nav-about"><a href="#about">about</a></li>
+            <li><a href="#grid">grid</a></li>
+            <li id="nav-syntax"><a href="#syntax">syntax</a></li>
+            <li><a href="#color">color</a></li>
+            <li><a href="#type">type</a></li>
+            <li><a href="#forms">forms</a></li>
+        </ul>
+    </div>
+    <a name="top"></a>
     <div class="header grid-container bottom-round">
         <div class="main-container">
             <div id="intro">
@@ -23,10 +35,11 @@
                 <h4>The last responsive boilerplate you'll ever need.<sup>*</sup></h4>
                 <p><em>Until you can remember the name of that one popular one that everyone keeps telling you about...</em></p>
                 <br>
-                <a class="button bg-dark" href="#">download</a>
+                <a class="btn-fancy bg-dark" href="#">download</a>
             </div>
         </div>
     </div>
+    <a name="about"></a>
     <div class="main-container bg-dark accent">
         <div class="grid-container">
             <div class="row">
@@ -69,11 +82,12 @@
             </div>
         </div>
     </div>
-    <div class="grid-container bg-secondary both-round">
+    <a name="grid"></a>
+    <div class="grid-container bg-primary both-round">
         <div class="grid-container">
             <div class="row">
                 <div class="col full v-flush">
-                    <h3 class="primary v-50">Responsive Grid</h3>
+                    <h3 class="secondary v-50">Responsive Grid</h3>
                     <hr>
                 </div>
             </div>
@@ -127,6 +141,7 @@
             <div class="row center">
                 <div class="col e-third small-box">33</div>
             </div>
+            <a name="syntax"></a>
             <div class="row center">
                 <div class="col e-quarter small-box">25</div>
             </div>
@@ -185,6 +200,7 @@
             </div>
         </div>
     </div>
+    <a name="color"></a>
     <div class="main-container bg-dark">
         <div class="grid-container">
             <div class="row">
@@ -198,14 +214,14 @@
                     <p class="light">Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location, and then use any of the built in classes to control the text or background color.</p>
                     <br>
                     <pre><code>
-        &lt;div class="bg-secondary"&gt;<br>
-        &nbsp;&nbsp;&lt;h4 class="primary"&gt;Primary Heading&lt;/h4&gt;<br>
+        &lt;div class="bg-primary"&gt;<br>
+        &nbsp;&nbsp;&lt;h4 class="secondary"&gt;Secondary Heading&lt;/h4&gt;<br>
         &lt;/div&gt;
         </code></pre>
                     <br>
                     <h6 class="light">Result:</h6>
-                    <div class="bg-secondary result">
-                        <h4 class="primary">Primary Heading</h4>
+                    <div class="bg-primary result">
+                        <h4 class="secondary">Secondary Heading</h4>
                     </div>
                 </div>
                 <div class="col-row four">
@@ -233,6 +249,7 @@
             </div>
         </div>
     </div>
+    <a name="type"></a>
     <div class="main-container bg-dark">
         <div class="grid-container light">
             <div class="row">
@@ -240,7 +257,7 @@
                     <h3 class="primary">Typography</h3>
                     <hr>
                     <p>The main body typeface is Open Sans, and the headings and buttons are Raleway, both provided by Google Fonts.</p>
-                    <div class="col eight bg-secondary center">
+                    <div class="col eight bg-accent dark center">
                         <h1>Head 1</h1>
                         <h2>Head 2</h2>
                         <h3>Head 3</h3>
@@ -252,20 +269,32 @@
                 <div class="col half">
                     <h3 class="primary">Buttons</h3>
                     <hr>
-                    <p>Add the <code class="dark">.button</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
+                    <p>Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
                     <div class="center v-50">
-                        <a class="button" href="#">Button</a>
-                        <a class="button bg-light dark" href="#">Button</a>
+                        <h4 class="primary">Plain</h4>
+                        <a class="btn outline" href="#">Button</a>
+                        <a class="btn bg-light dark" href="#">Button</a>
                         <br>
-                        <a class="button bg-primary" href="#">Button</a>
-                        <a class="button bg-secondary" href="#">Button</a>
+                        <a class="btn bg-primary" href="#">Button</a>
+                        <a class="btn bg-secondary" href="#">Button</a>
                         <br>
-                        <a class="button bg-accent dark" href="#">Button</a>
+                        <a class="btn bg-accent dark" href="#">Button</a>
+                    </div>
+                    <div class="center v-50">
+                        <h4 class="primary">Fancy</h4>
+                        <a class="btn-fancy" href="#">Button</a>
+                        <a class="btn-fancy bg-light dark" href="#">Button</a>
+                        <br>
+                        <a class="btn-fancy bg-primary" href="#">Button</a>
+                        <a class="btn-fancy bg-secondary" href="#">Button</a>
+                        <br>
+                        <a class="btn-fancy bg-accent dark" href="#">Button</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <a name="forms"></a>
     <div class="grid-container bg-light top-round">
         <div class="grid-container">
             <br>
@@ -296,7 +325,7 @@
             </div>
             <div class="row">
                 <div class="col eight right v-flush">
-                    <a class="button bg-primary" href="#">submit</a>
+                    <a class="btn bg-primary" href="#">submit</a>
                     <br>
                     <br>
                 </div>
