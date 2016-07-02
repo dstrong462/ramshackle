@@ -197,9 +197,9 @@
             <div class="row">
                 <div class="col half light">
                     <p><code>.hero</code>
-                        <br> This is for adding full flood background images like you see at the top of this page.</p>
+                        <br> This is for adding background images that take up 100% of the viewport.</p>
                     <p><code>.main-container</code>
-                        <br> Use this if you'd like a full flood background for your grid.</p>
+                        <br> This can be used for full width background colors for sections, or for your entire page.</p>
                     <p><code>.col-row</code>
                         <br> Use this if you'd like to convert a column into a row. You can then place multiple columns inside.
                         <br><em>Please note that using this will cause your margins to scale.</em></p>
@@ -286,7 +286,7 @@
                 <div class="col half">
                     <h3 class="primary">Buttons</h3>
                     <hr>
-                    <p>Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
+                    <p>Buttons come in 2 styles. Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> for a plain button. Or use <code class="dark">.btn-fancy</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
                     <div class="center v-50">
                         <h4 class="primary">Plain</h4>
                         <a class="btn outline" href="#">Button</a>
@@ -312,18 +312,19 @@
         </div>
     </div>
     <a name="forms"></a>
-    <div class="grid-container bg-light top-round">
+    <div class="grid-container bg-primary dark both-round">
         <div class="grid-container">
             <br>
-            <h3 class="primary h-25">Forms &amp; Inputs</h3>
+            <h3 class="light h-25">Forms &amp; Inputs</h3>
+            <hr class="h-25">
             <br>
-            <div class="row">
-                <div class="col four v-flush">
+            <div class="row v-flush">
+                <div class="col half">
                     <label for="email-input">Your e-mail</label>
                     <br>
                     <input class="full" type="email" placeholder="you@cooldude.com" id="email-input">
                 </div>
-                <div class="col four v-flush">
+                <div class="col half">
                     <label for="select-input">I'm Hungry For...</label>
                     <br>
                     <select class="full" id="select-input">
@@ -333,16 +334,16 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="col eight v-flush">
+            <div class="row v-flush">
+                <div class="col">
                     <label for="message-input">Message</label>
                     <br>
                     <textarea class="full" placeholder="What's up?" id="message-input"></textarea>
                 </div>
             </div>
-            <div class="row">
-                <div class="col eight right v-flush">
-                    <a class="btn bg-primary" href="#">submit</a>
+            <div class="row v-flush">
+                <div class="col full">
+                    <a class="btn bg-dark" href="#">submit</a>
                     <br>
                     <br>
                 </div>
@@ -350,6 +351,8 @@
         </div>
     </div>
 </div>
+
+<footer class="main-container"></footer>
 
 </body>
 </html>

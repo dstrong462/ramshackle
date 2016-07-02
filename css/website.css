@@ -64,6 +64,7 @@ label[for="nav-toggle"] {
 }
 
 .mobile-nav-bar {
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -222,6 +223,7 @@ body { color: #000; }
 
 @media (max-width: 480px) {
     .mobile-nav,
+    .mobile-nav-bar,
     #nav-toggle,
     label[for="nav-toggle"] { visibility: visible !important; }
     #navbar { display: none !important; }
