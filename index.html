@@ -14,18 +14,35 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <ul>
-            <li><a href="#top">top</a></li>
-            <li id="nav-about"><a href="#about">about</a></li>
-            <li><a href="#grid">grid</a></li>
-            <li id="nav-syntax"><a href="#syntax">syntax</a></li>
-            <li><a href="#color">color</a></li>
-            <li><a href="#type">type</a></li>
-            <li><a href="#forms">forms</a></li>
-        </ul>
-    </div>
-    <a name="top"></a>
+
+<ul class="mobile-nav">
+    <li><a href="#top">top</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#grid">grid</a></li>
+    <li><a href="#syntax">syntax</a></li>
+    <li><a href="#color">color</a></li>
+    <li><a href="#type">type</a></li>
+    <li><a href="#forms">forms</a></li>
+</ul>
+
+<div class="mobile-nav-bar"></div>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<label for="nav-toggle"></label>
+<a name="top"></a>
+
+<div id="navbar">
+    <ul>
+        <li><a href="#top">top</a></li>
+        <li id="nav-about"><a href="#about">about</a></li>
+        <li><a href="#grid">grid</a></li>
+        <li id="nav-syntax"><a href="#syntax">syntax</a></li>
+        <li><a href="#color">color</a></li>
+        <li><a href="#type">type</a></li>
+        <li><a href="#forms">forms</a></li>
+    </ul>
+</div>
+
+<div class="content">
     <div class="header grid-container bottom-round">
         <div class="main-container">
             <div id="intro">
@@ -40,7 +57,7 @@
         </div>
     </div>
     <a name="about"></a>
-    <div class="main-container bg-dark accent">
+    <div class="main-container accent">
         <div class="grid-container">
             <div class="row">
                 <div class="col full v-flush">
@@ -201,7 +218,7 @@
         </div>
     </div>
     <a name="color"></a>
-    <div class="main-container bg-dark">
+    <div class="main-container">
         <div class="grid-container">
             <div class="row">
                 <div class="col full">
@@ -250,7 +267,7 @@
         </div>
     </div>
     <a name="type"></a>
-    <div class="main-container bg-dark">
+    <div class="main-container">
         <div class="grid-container light">
             <div class="row">
                 <div class="col half">
@@ -332,6 +349,7 @@
             </div>
         </div>
     </div>
-</body>
+</div>
 
+</body>
 </html>
