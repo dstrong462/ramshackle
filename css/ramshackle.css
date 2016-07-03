@@ -1,16 +1,17 @@
 /*
-* Ramshackle v0.8
+* Ramshackle v0.9
 * Copyright 2016, Daniel Strong
 * www.getramshackle.com
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 6/22/2016
+* 7/2/2016
 */
 
 /*  TABLE OF CONTENTS
 ==================================
 
 - Blanket Settings
+- Outlines for Troubleshooting
 - The Grid
 - Default Element Styling
 - Type Styling
@@ -20,7 +21,6 @@
 - Lists
 - Misc Tools
 - Clearfix
-- Grid Styling
 - Media Queries
 - Font Declarations
 - Color Palette
@@ -269,7 +269,6 @@ label {
     margin-left: 2px;
 }
 
-
 textarea {
     min-height: 100px;
     max-height: 600px;
@@ -321,7 +320,7 @@ li {
     margin-bottom: 50px;
 }
 
-/* These give elements some horizontal room to breathe */
+/* These give elements some horizontal room to stretch */
 .h-25 {
     margin-left: 25px;
     margin-right: 25px;
@@ -360,14 +359,6 @@ li {
     content: '';
     display: table;
     clear: both;
-}
-
-/*  GRID STYLING
-================================== */
-
-.box {
-    background-color: #fafafa;
-    box-shadow: 0 0 15px rgba(0,0,0,.25);
 }
 
 /*  MEDIA QUERY BREAKPOINTS
@@ -449,17 +440,3 @@ h1, h2, h3, h4, h5, h6, button {
 .bg-primary { background-color: #ff5f66; }
 .bg-secondary { background-color: #ffbc55; }
 .bg-accent { background-color: #66abf7; }*/
-
-/* These control the fill of your inline SVG images */
-/*.svg-dark { fill: #424242; }
-.svg-light { fill: #dedede; }
-.svg-primary { fill: #ff5f66; }
-.svg-secondary { fill: #ffbc55; }
-.svg-accent { fill: #66abf7; }*/
-
-/*.orange-red-grad {
-    box-sizing: padding-box;
-    background: linear-gradient(#ffbc55, #ff5f66);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}*/
