@@ -1,17 +1,17 @@
-/*
-* Ramshackle v0.8
-* Copyright 2016, Daniel Strong
-* www.getramshackle.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 6/22/2016
-*/
+ Ramshackle v0.9
+Copyright 2016, Daniel Strong
+www.getramshackle.com
+Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+7/3/2016 */
 
 /*  TABLE OF CONTENTS
 ==================================
 
 - Blanket Settings
+- Outlines for Troubleshooting
 - The Grid
+- Positioning
 - Default Element Styling
 - Type Styling
 - Buttons
@@ -20,7 +20,6 @@
 - Lists
 - Misc Tools
 - Clearfix
-- Grid Styling
 - Media Queries
 - Font Declarations
 - Color Palette
@@ -39,22 +38,9 @@
 /*  OUTLINES FOR TROUBLESHOOTING
 ================================== */
 
-/*.main-container { outline: 1px solid yellow; }*/
 /*.grid-container { outline: 1px solid green; }
 .row { outline: 1px solid blue; }
 .col { outline: 1px solid red; }*/
-
-/*  SINGLE USE THINGS
-================================== */
-
-.splash {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    background: radial-gradient(ellipse at center, #fafafa 0%, #cacaca 100%);
-    text-align: center;
-    margin: 0 auto;
-}
 
 /*  THE GRID
 ================================== */
@@ -63,7 +49,7 @@
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    /*background-image: url('../img/photo-1453227588063-bb302b62f50b.jpg');*/
+    /*background-image: url('../img/');*/
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -92,9 +78,11 @@
 }
 
 .col {
+    display: inline-block;
     float: left;
     width: 100%;
     text-align: left;
+    vertical-align: top;
     padding: 25px;
     margin: 0 2% 0 0;
 }
@@ -111,40 +99,56 @@
 .col:first-child { margin-left: 0; }
 .col:last-child { margin-right: 0; }
 
-/* Use on an element to align content to CENTER */
-.center {
+/*  POSITIONING
+================================== */
+
+/* Use 'center' on a row to align its columns */
+.row.center {
     text-align: center;
-    vertical-align: top;
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Use on a row to align columns to CENTER */
-.center .col {
-    display: inline-block;
+.row.center .col {
     float: none;
 }
 
-/* Use on an element to align content to LEFT */
-.left {
-    text-align: left;
+/* Use 'center' on a column to align its content */
+div.center {
+    text-align: center;
 }
 
-/* Use on a row to align columns to LEFT */
+/* Use 'left' on a row to align its columns */
 .left .col {
-    display: inline-block;
     float: left;
 }
 
-/* Use on an element to align content to RIGHT */
-.right {
-    text-align: right;
+/* Use 'left' on a column to align its content */
+.left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+.left * {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
 }
 
-/* Use on a row to align columns to RIGHT */
+/* Use 'right' on a row to align its columns */
 .right .col {
-    display: inline-block;
     float: right;
+}
+
+/* Use 'right' on a column to align its content */
+.right {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+.right * {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 /*  DEFAULT ELEMENT STYLING
@@ -190,7 +194,34 @@ h6 { font-size: 1.3em; }
 /*  BUTTONS
 ================================== */
 
-.button {
+.btn {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: .8em;
+    letter-spacing: .22em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 4px;
+    outline: 0;
+    padding: 12px 36px;
+    margin: 5px;
+}
+
+.btn:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+}
+
+.btn-fancy {
+    position: relative;
     display: inline-block;
     color: #fff;
     font-size: .85em;
@@ -199,28 +230,24 @@ h6 { font-size: 1.3em; }
     text-decoration: none;
     text-transform: uppercase;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 4px;
     outline: 0;
     box-shadow: 0 0 15px rgba(0,0,0,.22);
     padding: 17px 45px;
     margin: 5px;
-    transition: .25s;
 }
 
-.button:hover {
+.btn-fancy:hover {
     animation: pulse 1s ease-out infinite;
     box-shadow: 0 0 10px rgba(255,255,255, .5) inset;
 }
 
 @keyframes pulse {
-    0% { color: #fff; }
     40% { color: rgba(255,255,255,.2); }
-    85% { color: #fff; }
-    100% { color: #fff; }
 }
 
-/*  FORMS AND INPUTS
+/*  FORMS & INPUTS
 ================================== */
 
 input[type='email'],
@@ -231,15 +258,21 @@ input[type='tel'],
 input[type='text'],
 input[type='url'],
 textarea,
-select {
+select,
+option {
     box-sizing: border-box;
     box-shadow: none;
-    font-size: 1.15em;
+    font-size: 1em;
     background-color: #fafafa;
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: 6px 12px;
-    margin: 4px 0 0 0;
+    margin: 3px 0 0 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin-right: 15px;
 }
 
 label {
@@ -248,7 +281,6 @@ label {
     cursor: default;
     margin-left: 2px;
 }
-
 
 textarea {
     min-height: 100px;
@@ -273,7 +305,7 @@ code {
 pre > code {
     display: inline-block;
     word-wrap: break-word;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 /*  LISTS
@@ -301,7 +333,7 @@ li {
     margin-bottom: 50px;
 }
 
-/* These give elements some horizontal room to breathe */
+/* These give elements some horizontal room to stretch */
 .h-25 {
     margin-left: 25px;
     margin-right: 25px;
@@ -312,40 +344,32 @@ li {
     margin-right: 50px;
 }
 
+/* These tighten things up a bit */
 .flush {
     padding: 0;
 }
 
-.v-flush {
+.v-flush,
+.v-flush .col {
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.h-flush {
+.h-flush,
+.h-flush .col {
     padding-left: 0;
     padding-right: 0;
 }
 
-/*  CLEAR FIX
+/*  CLEARFIX
 ================================ */
 
 .main-container,
 .grid-container,
-.row,
-.center,
-.left,
-.right {
+.row {
     content: '';
     display: table;
     clear: both;
-}
-
-/*  GRID STYLING
-================================== */
-
-.box {
-    background-color: #fafafa;
-    box-shadow: 0 0 15px rgba(0,0,0,.25);
 }
 
 /*  MEDIA QUERY BREAKPOINTS
@@ -414,36 +438,16 @@ h1, h2, h3, h4, h5, h6, button {
 ================================== */
 
 /* These control your TEXT colors */
-/*body { color: #424242; }
-.dark { color: #424242; }
-.light { color: #dedede; }
-.primary { color: #ff5f66; }
-.secondary { color: #ffbc55; }
-.accent { color: #66abf7; }
+body { color: #000; }
+.dark { color: #353535; }
+.light { color: #fff; }
+.primary { color: #289784; }
+.secondary { color: #84dacb; }
+.accent { color: #dedede; }
 
 /* These control your BACKGROUND colors */
-/*.bg-dark { background-color: #424242; }
-.bg-light { background-color: #dedede; }
-.bg-primary { background-color: #ff5f66; }
-.bg-secondary { background-color: #ffbc55; }
-.bg-accent { background-color: #66abf7; }*/
-
-/* These control the fill of your inline SVG images */
-/*.svg-dark { fill: #424242; }
-.svg-light { fill: #dedede; }
-.svg-primary { fill: #ff5f66; }
-.svg-secondary { fill: #ffbc55; }
-.svg-accent { fill: #66abf7; }*/
-
-/*.orange-red-grad {
-    box-sizing: padding-box;
-    background: linear-gradient(#ffbc55, #ff5f66);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}*/
-
-
-/*
-add font weight 600 for open sans
-
-*/
+.bg-dark { background-color: #353535; }
+.bg-light { background-color: #fff; }
+.bg-primary { background-color: #289784; }
+.bg-secondary { background-color: #84dacb; }
+.bg-accent { background-color: #dedede; }
