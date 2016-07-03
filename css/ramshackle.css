@@ -104,6 +104,8 @@
 /* Use on an element to align content to CENTER */
 .center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Use on a row to align columns to CENTER */
