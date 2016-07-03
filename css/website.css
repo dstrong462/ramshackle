@@ -135,6 +135,17 @@ label[for="nav-toggle"] {
     padding: 70px 35px;
 }
 
+.github {
+    text-decoration: none;
+    font-size: .9em;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.github:hover {
+    color: #dedede;
+}
+
 .svg-about {
     max-width: 150px;
     margin: 0 auto;
