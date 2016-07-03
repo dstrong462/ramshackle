@@ -60,7 +60,7 @@
     <div class="main-container accent">
         <div class="grid-container">
             <div class="row">
-                <div class="col full v-flush">
+                <div class="col full">
                     <h3 class="primary">About Ramshackle</h3>
                     <hr class="full">
                 </div>
@@ -163,7 +163,7 @@
                 <div class="col e-quarter small-box">25</div>
             </div>
         </div>
-        <div class="grid-container">
+        <div class="small-grid-container">
             <br>
             <h4 class="dark center">The Syntax</h4>
             <hr class="one">
@@ -231,10 +231,10 @@
                     <p class="light">Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location, and then use any of the built in classes to control the text or background color.</p>
                     <br>
                     <pre><code>
-        &lt;div class="bg-primary"&gt;<br>
-        &nbsp;&nbsp;&lt;h4 class="secondary"&gt;Secondary Heading&lt;/h4&gt;<br>
-        &lt;/div&gt;
-        </code></pre>
+                        &lt;div class="bg-primary"&gt;<br>
+                        &nbsp;&nbsp;&lt;h4 class="secondary"&gt;Secondary Heading&lt;/h4&gt;<br>
+                        &lt;/div&gt;
+                    </code></pre>
                     <br>
                     <h6 class="light">Result:</h6>
                     <div class="bg-primary result">
@@ -327,7 +327,7 @@
                 <div class="col half">
                     <label for="select-input">I'm Hungry For...</label>
                     <br>
-                    <select class="full" id="select-input">
+                    <select class="full dark" id="select-input">
                         <option value="opt-1">Tacos</option>
                         <option value="opt-2">Many Tacos</option>
                         <option value="opt-3">Infinite Tacos</option>
@@ -342,10 +342,18 @@
                 </div>
             </div>
             <div class="row v-flush">
-                <div class="col full">
+                <div class="col quarter">
                     <a class="btn bg-dark" href="#">submit</a>
                     <br>
                     <br>
+                </div>
+                <div class="col three">
+                    <label><input type="checkbox">Check for Guacamole</label><br>
+                    <label><input type="checkbox">Check for Queso</label>
+                </div>
+                <div class="col three h-flush">
+                    <label><input type="radio" name="radio">I like this</label><br>
+                    <label><input type="radio" name="radio">I do not like this</label>
                 </div>
             </div>
         </div>

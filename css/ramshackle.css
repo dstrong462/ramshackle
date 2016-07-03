@@ -245,15 +245,21 @@ input[type='tel'],
 input[type='text'],
 input[type='url'],
 textarea,
-select {
+select,
+option {
     box-sizing: border-box;
     box-shadow: none;
-    font-size: 1.15em;
+    font-size: 1em;
     background-color: #fafafa;
     border: 1px solid #aaa;
     border-radius: 4px;
     padding: 6px 12px;
-    margin: 4px 0 0 0;
+    margin: 3px 0 0 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin-right: 15px;
 }
 
 label {
@@ -287,7 +293,7 @@ code {
 pre > code {
     display: inline-block;
     word-wrap: break-word;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 /*  LISTS

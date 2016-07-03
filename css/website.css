@@ -260,7 +260,7 @@ body { color: #000; }
         color: #fff;
         padding: 15px;
     }
-    .small-grid-container { width: 96%; }
+    .small-grid-container { width: 95%; }
     .header { background-position: center bottom; }
     .small-box {
         font-size: .85em;
