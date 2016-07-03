@@ -1,11 +1,9 @@
-
-* Ramshackle v0.9
-* Copyright 2016, Daniel Strong
-* www.getramshackle.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 7/2/2016
-*/
+/* Ramshackle v0.9
+Copyright 2016, Daniel Strong
+www.getramshackle.com
+Free to use under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+7/3/2016 */
 
 /*  TABLE OF CONTENTS
 ==================================
@@ -13,6 +11,7 @@
 - Blanket Settings
 - Outlines for Troubleshooting
 - The Grid
+- Positioning
 - Default Element Styling
 - Type Styling
 - Buttons
@@ -39,7 +38,6 @@
 /*  OUTLINES FOR TROUBLESHOOTING
 ================================== */
 
-/*.main-container { outline: 1px solid yellow; }*/
 /*.grid-container { outline: 1px solid green; }
 .row { outline: 1px solid blue; }
 .col { outline: 1px solid red; }*/
@@ -100,6 +98,9 @@
 .row:first-of-type { margin-top: 0; }
 .col:first-child { margin-left: 0; }
 .col:last-child { margin-right: 0; }
+
+/*  POSITIONING
+================================== */
 
 /* Use 'center' on a row to align its columns */
 .row.center {
@@ -243,13 +244,10 @@ h6 { font-size: 1.3em; }
 }
 
 @keyframes pulse {
-    0% {  }
     40% { color: rgba(255,255,255,.2); }
-    85% {  }
-    100% {  }
 }
 
-/*  FORMS AND INPUTS
+/*  FORMS & INPUTS
 ================================== */
 
 input[type='email'],
@@ -346,6 +344,7 @@ li {
     margin-right: 50px;
 }
 
+/* These tighten things up a bit */
 .flush {
     padding: 0;
 }
@@ -362,7 +361,7 @@ li {
     padding-right: 0;
 }
 
-/*  CLEAR FIX
+/*  CLEARFIX
 ================================ */
 
 .main-container,
@@ -451,4 +450,4 @@ h1, h2, h3, h4, h5, h6, button {
 .bg-light { background-color: #dedede; }
 .bg-primary { background-color: #ff5f66; }
 .bg-secondary { background-color: #ffbc55; }
-.bg-accent { background-color: #66abf7; }
+.bg-accent { background-color: #66abf7; }*/
