@@ -1,4 +1,4 @@
-/*
+
 * Ramshackle v0.9
 * Copyright 2016, Daniel Strong
 * www.getramshackle.com
@@ -81,10 +81,10 @@
 
 .col {
     display: inline-block;
-    vertical-align: top;
     float: left;
     width: 100%;
     text-align: left;
+    vertical-align: top;
     padding: 25px;
     margin: 0 2% 0 0;
 }
@@ -101,38 +101,53 @@
 .col:first-child { margin-left: 0; }
 .col:last-child { margin-right: 0; }
 
-/* Use on an element to align content to CENTER */
-.center {
+/* Use 'center' on a row to align its columns */
+.row.center {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Use on a row to align columns to CENTER */
-.center .col {
+.row.center .col {
     float: none;
 }
 
-/* Use on an element to align content to LEFT */
-.left {
-    text-align: left;
+/* Use 'center' on a column to align its content */
+div.center {
+    text-align: center;
 }
 
-/* Use on a row to align columns to LEFT */
+/* Use 'left' on a row to align its columns */
 .left .col {
-    display: inline-block;
     float: left;
 }
 
-/* Use on an element to align content to RIGHT */
-.right {
-    text-align: right;
+/* Use 'left' on a column to align its content */
+.left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+.left * {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
 }
 
-/* Use on a row to align columns to RIGHT */
+/* Use 'right' on a row to align its columns */
 .right .col {
-    display: inline-block;
     float: right;
+}
+
+/* Use 'right' on a column to align its content */
+.right {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+.right * {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 /*  DEFAULT ELEMENT STYLING
@@ -352,10 +367,7 @@ li {
 
 .main-container,
 .grid-container,
-.row,
-.center,
-.left,
-.right {
+.row {
     content: '';
     display: table;
     clear: both;
@@ -439,4 +451,4 @@ h1, h2, h3, h4, h5, h6, button {
 .bg-light { background-color: #dedede; }
 .bg-primary { background-color: #ff5f66; }
 .bg-secondary { background-color: #ffbc55; }
-.bg-accent { background-color: #66abf7; }*/
+.bg-accent { background-color: #66abf7; }

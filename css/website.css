@@ -112,7 +112,7 @@ label[for="nav-toggle"] {
 }
 
 #navbar ul li a:hover {
-    color: #fff;
+    color: #84dacb;
 }
 
 .header {
@@ -175,7 +175,7 @@ footer {
 }
 
 .svg-footer {
-    max-width: 250px;
+    max-width: 275px;
 }
 
 footer a {
