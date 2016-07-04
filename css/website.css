@@ -254,8 +254,10 @@ body { color: #000; }
 .bg-accent { background-color: #dedede; }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    #nav-about,
-    #nav-syntax { display: none !important; }
+    #navbar ul li {
+        font-size: .95em;
+        margin: 0;
+    }
     #intro { margin: 0 auto; }
     .small-grid-container { width: 90%; }
     .divider { border: none; }
@@ -277,6 +279,9 @@ body { color: #000; }
         font-size: .85em;
         padding: 3px;
     }
+    .top-round,
+    .bottom-round,
+    .both-round { border-radius: 0; }
     .divider { border-left: none; }
 }
 
