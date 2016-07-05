@@ -1,9 +1,10 @@
+
 /*
-Ramshackle v0.9
+Ramshackle v0.9.2
 Copyright 2016, Daniel Strong
 www.getramshackle.com
 Free to use under the MIT license.
-7.3.2016
+7/4/2016
 */
 
 /*  TABLE OF CONTENTS
@@ -22,19 +23,13 @@ Free to use under the MIT license.
 - Misc Tools
 - Clearfix
 - Media Queries
-- Font Declarations
-- Color Palette
 
 ================================ */
 
 /*  BLANKET SETTINGS
 ================================ */
 
-* { box-sizing: border-box; }
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
+*, *:before, *:after { box-sizing: border-box; }
 
 /*  OUTLINES FOR TROUBLESHOOTING
 ================================== */
@@ -79,7 +74,6 @@ Free to use under the MIT license.
 }
 
 .col {
-    display: inline-block;
     float: left;
     width: 100%;
     text-align: left;
@@ -111,6 +105,7 @@ Free to use under the MIT license.
 }
 .row.center .col {
     float: none;
+    display: inline-block;
 }
 
 /* Use 'center' on a column to align its content */
@@ -262,10 +257,11 @@ textarea,
 select,
 option {
     box-sizing: border-box;
+    height: 40px;
     box-shadow: none;
     font-size: 1em;
     background-color: #fafafa;
-    border: 1px solid #aaa;
+    border: none;
     border-radius: 4px;
     padding: 6px 12px;
     margin: 3px 0 0 0;
@@ -300,7 +296,7 @@ code {
     background-color: #dedede;
     border-radius: 4px;
     padding: .1em .6em;
-    margin: .15em .3em;
+    margin: .1em 0;
 }
 
 pre > code {
@@ -425,30 +421,3 @@ li {
     h5 { font-size: 1.4em; }
     h6 { font-size: 1em; }
 }
-
-/*  FONT DECLARATIONS
-================================== */
-
-* { font-family: 'Open Sans', sans-serif; }
-
-h1, h2, h3, h4, h5, h6, button {
-    font-family: 'Raleway', sans-serif;
-}
-
-/*  COLOR PALETTE
-================================== */
-
-/* These control your TEXT colors */
-body { color: #000; }
-.dark { color: #353535; }
-.light { color: #fff; }
-.primary { color: #289784; }
-.secondary { color: #84dacb; }
-.accent { color: #dedede; }
-
-/* These control your BACKGROUND colors */
-.bg-dark { background-color: #353535; }
-.bg-light { background-color: #fff; }
-.bg-primary { background-color: #289784; }
-.bg-secondary { background-color: #84dacb; }
-.bg-accent { background-color: #dedede; }

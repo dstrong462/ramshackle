@@ -1,0 +1,26 @@
+/*  FONT DECLARATIONS (Customize Me!)
+===================================== */
+
+* { font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*  COLOR PALETTE (Customize Me!)
+===================================== */
+
+/* These control your TEXT colors */
+body { color: #000; }
+.dark { color: #353535; }
+.light { color: #fff; }
+.primary { color: #289784; }
+.secondary { color: #84dacb; }
+.accent { color: #f2f2f2; }
+
+/* These control your BACKGROUND colors */
+.bg-dark { background-color: #353535; }
+.bg-light { background-color: #fff; }
+.bg-primary { background-color: #289784; }
+.bg-secondary { background-color: #84dacb; }
+.bg-accent { background-color: #f2f2f2; }
