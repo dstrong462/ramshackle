@@ -1,6 +1,6 @@
 
 /*
-Ramshackle v0.9.1
+Ramshackle v0.9.2
 Copyright 2016, Daniel Strong
 www.getramshackle.com
 Free to use under the MIT license.
@@ -23,8 +23,6 @@ Free to use under the MIT license.
 - Misc Tools
 - Clearfix
 - Media Queries
-- Font Declarations
-- Color Palette
 
 ================================ */
 
@@ -298,7 +296,7 @@ code {
     background-color: #dedede;
     border-radius: 4px;
     padding: .1em .6em;
-    margin: .15em .3em;
+    margin: .1em 0;
 }
 
 pre > code {
@@ -423,30 +421,3 @@ li {
     h5 { font-size: 1.4em; }
     h6 { font-size: 1em; }
 }
-
-/*  FONT DECLARATIONS
-================================== */
-
-* { font-family: 'Open Sans', sans-serif; }
-
-h1, h2, h3, h4, h5, h6, button {
-    font-family: 'Raleway', sans-serif;
-}
-
-/*  COLOR PALETTE
-================================== */
-
-/* These control your TEXT colors */
-/*body { color: #424242; }
-.dark { color: #424242; }
-.light { color: #dedede; }
-.primary { color: #ff5f66; }
-.secondary { color: #ffbc55; }
-.accent { color: #66abf7; }*/
-
-/* These control your BACKGROUND colors */
-/*.bg-dark { background-color: #424242; }
-.bg-light { background-color: #dedede; }
-.bg-primary { background-color: #ff5f66; }
-.bg-secondary { background-color: #ffbc55; }
-.bg-accent { background-color: #66abf7; }*/
