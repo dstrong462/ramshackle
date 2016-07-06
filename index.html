@@ -8,7 +8,7 @@
     <meta name="author" content="Daniel Strong">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/ramshackle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -61,7 +61,7 @@
         </div>
     </div>
     <a id="about"></a>
-    <div class="main-container accent">
+    <div class="main-container">
         <div class="grid-container">
             <div class="row">
                 <div class="col full">
@@ -233,7 +233,7 @@
             </div>
             <div class="row">
                 <div class="col half v-flush">
-                    <p class="light">Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location, and then use any of the built in classes to control the text or background color.</p>
+                    <p>Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location in the included <code>style.css</code>, and then use any of the built in classes to control the text or background color.</p>
                     <br>
                     <pre><code>
                         &lt;div class="bg-primary"&gt;<br>
@@ -241,31 +241,39 @@
                         &lt;/div&gt;
                     </code></pre>
                     <br>
-                    <h6 class="light">Result:</h6>
+                    <h6>Result:</h6>
                     <div class="bg-primary result">
                         <h4 class="secondary">Secondary Heading</h4>
                     </div>
                 </div>
                 <div class="col-row four">
                     <div class="row">
+                        <div class="col half primary v-flush">
+                            <h6>Backgrounds</h6>
+                        </div>
+                        <div class="col half primary v-flush">
+                            <h6>Text Colors</h6>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col half outline bg-dark light">.bg-dark</div>
                         <div class="col half bg-light dark">.dark</div>
                     </div>
                     <div class="row">
                         <div class="col half bg-light">.bg-light</div>
-                        <div class="col half light">.light</div>
+                        <div class="col half bg-dark light">.light</div>
                     </div>
                     <div class="row">
-                        <div class="col half bg-primary">.bg-primary</div>
-                        <div class="col half primary">.primary</div>
+                        <div class="col half bg-primary light">.bg-primary</div>
+                        <div class="col half bg-dark primary">.primary</div>
                     </div>
                     <div class="row">
                         <div class="col half bg-secondary light">.bg-secondary</div>
-                        <div class="col half secondary">.secondary</div>
+                        <div class="col half bg-dark secondary">.secondary</div>
                     </div>
                     <div class="row">
-                        <div class="col half bg-accent">.bg-accent</div>
-                        <div class="col half accent">.accent</div>
+                        <div class="col half bg-accent outline">.bg-accent</div>
+                        <div class="col half bg-dark accent">.accent</div>
                     </div>
                 </div>
             </div>
@@ -273,13 +281,13 @@
     </div>
     <a id="type"></a>
     <div class="main-container">
-        <div class="grid-container light">
+        <div class="grid-container">
             <div class="row">
                 <div class="col half">
                     <h3 class="primary">Typography</h3>
                     <hr>
                     <p>The main body typeface is Open Sans, and the headings and buttons are Raleway, both provided by Google Fonts.</p>
-                    <div class="col eight bg-accent dark center">
+                    <div class="col eight bg-secondary primary center">
                         <h1>Head 1</h1>
                         <h2>Head 2</h2>
                         <h3>Head 3</h3>
@@ -294,23 +302,23 @@
                     <p>Buttons come in 2 styles. Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> for a plain button. Or use <code class="dark">.btn-fancy</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
                     <div class="center v-50">
                         <h4 class="primary">Plain</h4>
-                        <a class="btn outline" href="#">Button</a>
+                        <a class="btn bg-dark" href="#">Button</a>
                         <a class="btn bg-light dark" href="#">Button</a>
                         <br>
                         <a class="btn bg-primary" href="#">Button</a>
                         <a class="btn bg-secondary" href="#">Button</a>
                         <br>
-                        <a class="btn bg-accent dark" href="#">Button</a>
+                        <a class="btn outline dark" href="#">Button</a>
                     </div>
                     <div class="center v-50">
                         <h4 class="primary">Fancy</h4>
-                        <a class="btn-fancy" href="#">Button</a>
+                        <a class="btn-fancy bg-dark" href="#">Button</a>
                         <a class="btn-fancy bg-light dark" href="#">Button</a>
                         <br>
                         <a class="btn-fancy bg-primary" href="#">Button</a>
                         <a class="btn-fancy bg-secondary" href="#">Button</a>
                         <br>
-                        <a class="btn-fancy bg-accent dark" href="#">Button</a>
+                        <a class="btn-fancy dark" href="#">Button</a>
                     </div>
                 </div>
             </div>
@@ -365,7 +373,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="bg-dark accent">
         <div class="row">
             <div class="col third">
                 <img class="svg-footer" src="img/logo.svg" alt="Ramshackle Logo">
