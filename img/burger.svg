@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="25px" height="25px" viewBox="0 2.5 25 25" enable-background="new 0 2.5 25 25" xml:space="preserve">
-<rect y="2.5" fill="#DEDEDE" width="25" height="4"/>
-<rect y="23.5" fill="#DEDEDE" width="25" height="4"/>
-<rect y="13" fill="#DEDEDE" width="25" height="4"/>
+<rect y="2.5" fill="#BBBBBB" width="25" height="4"/>
+<rect y="23.5" fill="#BBBBBB" width="25" height="4"/>
+<rect y="13" fill="#BBBBBB" width="25" height="4"/>
 </svg>
