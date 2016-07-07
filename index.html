@@ -17,19 +17,19 @@
 
 <body>
 
-<ul class="mobile-nav">
-    <li><a href="#top">top</a></li>
-    <li><a href="#about">about</a></li>
-    <li><a href="#grid">grid</a></li>
-    <li><a href="#syntax">syntax</a></li>
-    <li><a href="#color">color</a></li>
-    <li><a href="#type">type</a></li>
-    <li><a href="#forms">forms</a></li>
-</ul>
-
-<div class="mobile-nav-bar"></div>
 <input type="checkbox" id="nav-toggle" class="nav-toggle">
 <label for="nav-toggle"></label>
+<div class="mobile-nav">
+    <ul class="mobile-nav-list">
+        <li><a href="#top">top</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#grid">grid</a></li>
+        <li><a href="#syntax">syntax</a></li>
+        <li><a href="#color">color</a></li>
+        <li><a href="#type">type</a></li>
+        <li><a href="#forms">forms</a></li>
+    </ul>
+</div>
 
 <div id="navbar">
     <ul>
@@ -43,354 +43,352 @@
     </ul>
 </div>
 
-<div class="content">
-    <a id="top"></a>
-    <div class="header grid-container bottom-round">
-        <div class="main-container">
-            <div id="intro">
-                <img src="img/logo.svg" alt="Ramshackle Logo">
-                <br>
-                <br>
-                <h4>The last responsive boilerplate you'll ever need.<sup>*</sup></h4>
-                <p><em><sup>*</sup>Until you can remember the name of that popular one that everyone keeps telling you about.</em></p>
-                <br>
-                <a class="btn-fancy bg-dark" href="https://github.com/beeramir/ramshackle/releases/download/0.9.2/Ramshackle-0.9.2.zip">download</a>
-                <br>
-                <a class="github" href="https://github.com/beeramir/ramshackle/tree/master" target="_blank">View source on GitHub</a>
-            </div>
-        </div>
-    </div>
-    <a id="about"></a>
+<a id="top"></a>
+<div class="header grid-container bottom-round">
     <div class="main-container">
-        <div class="grid-container">
-            <div class="row">
-                <div class="col full">
-                    <h3 class="primary">About Ramshackle</h3>
-                    <hr class="full">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col three">
-                    <h5 class="primary">What is this thing?</h5>
-                    <p>It's a basic responsive framework with some light styling. It handles the under the hood stuff so you can quickstart a prototype or a simple website in no time. But it might catch on fire. So, there's that.</p> 
-                </div>
-                <div class="col two">
-                    <img class="svg-about" src="img/css-fire.svg" alt="A CSS Document on Fire">
-                </div>
-                <div class="col three">
-                    <h5 class="primary">Who should use this thing?</h5>
-                    <p>I'll be straight with you. I started learning web development about 4 months ago. If you're the kind of person who loves lots of unique <s>bugs</s> features then this is going to be awesome for you.</p>
-                </div>
-                <div class="col two">
-                    <img class="svg-about" src="img/grid-fire.svg" alt="A Webpage on Fire">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col three">
-                    <h5 class="primary">Why did you build this thing?</h5>
-                    <p>I'm an apiring front-end developer that wanted a good project to improve my coding skills, learn responsive design, to have a nice project to add to my portfolio, and a system that I can use to build other sites. That's like 4 birds with 1 stone!</p>
-                </div>
-                <div class="col two">
-                    <img class="svg-about" src="img/castle-fire.svg" alt="A Sand Castle on Fire">
-                </div>
-                <div class="col three">
-                    <h5 class="primary">Why do you ask so many things?</h5>
-                    <p>Because I need some content to fluff up this section of the site.</p>
-                </div>
-                <div class="col two">
-                    <img class="svg-about" src="img/question-fire.svg" alt="A Question Bubble on Fire">
-                </div>
-            </div>
+        <div id="intro">
+            <img src="img/logo.svg" alt="Ramshackle Logo">
+            <br>
+            <br>
+            <h4>The last responsive boilerplate you'll ever need.<sup>*</sup></h4>
+            <p><em><sup>*</sup>Until you can remember the name of that popular one that everyone keeps telling you about.</em></p>
+            <br>
+            <a class="btn-fancy bg-dark" href="https://github.com/beeramir/ramshackle/releases/download/0.9.2/Ramshackle-0.9.2.zip">download</a>
+            <br>
+            <a class="github" href="https://github.com/beeramir/ramshackle/tree/master" target="_blank">View source on GitHub</a>
         </div>
     </div>
-    <a id="grid"></a>
-    <div class="grid-container bg-primary both-round">
-        <div class="grid-container">
-            <div class="row">
-                <div class="col full">
-                    <h3 class="secondary">Responsive Grid</h3>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col seven light v-flush">
-                    <p>This grid uses a base-10 system with a max width of 1000px. You can add columns in increments of 10 all the way up to 100. It's like the metric system of responsive grids, but also allows for some in-between sizes like 1/4, 1/3, 2/3, and 3/4. The max width can be changed with a single number, and all content should scale proportionally. Ramshackle also uses 2 different media query breakpoints for tablets and smart phones so your content will look great on any device.</p>
-                    <p>Go ahead and resize the browser, and take it for a spin.</p>
-                </div>
-                <div class="col three v-flush">
-                    <img class="svg-responsive" src="img/responsive-design-symbol.svg" alt="A Computer and Cellphone">
-                </div>
-            </div>
-        </div>
-        <div class="small-grid-container center">
-            <br>
-            <h4 class="dark">Base-10 Sizes</h4>
-            <hr class="two">
-            <br>
-            <div class="e-row">
-                <div class="e-col e-one small-box">10</div>
-                <div class="e-col e-nine small-box">90</div>
-            </div>
-            <div class="e-row">
-                <div class="e-col e-two small-box">20</div>
-                <div class="e-col e-eight small-box">80</div>
-            </div>
-            <div class="e-row">
-                <div class="e-col e-three small-box">30</div>
-                <div class="e-col e-seven small-box">70</div>
-            </div>
-            <div class="e-row">
-                <div class="e-col e-four small-box">40</div>
-                <div class="e-col e-six small-box">60</div>
-            </div>
-            <div class="e-row">
-                <div class="e-col e-five small-box">50</div>
-                <div class="e-col e-five small-box">50</div>
-            </div>
-            <div class="e-row">
-                <div class="e-col e-ten small-box">100</div>
-            </div>
-            <br>
-            <h4 class="dark">In Between Sizes</h4>
-            <hr class="two">
-            <br>
-            <div class="row center">
-                <div class="col e-three-quarters small-box">75</div>
-            </div>
-            <div class="row center">
-                <div class="col e-two-thirds small-box">66</div>
-            </div>
-            <div class="row center">
-                <div class="col e-third small-box">33</div>
-            </div>
-            <a id="syntax"></a>
-            <div class="row center">
-                <div class="col e-quarter small-box">25</div>
-            </div>
-        </div>
-        <div class="small-grid-container center">
-            <br>
-            <h4 class="dark center">The Syntax</h4>
-            <hr class="one">
-            <br>
-            <div class="row">
-                <div class="col half">
-                    <pre><code>
-                &lt;div class="grid-container"&gt;<br>
-                &lt;div class="row"&gt;<br>
-                &lt;div class="col four"&gt;Four&lt;/div&gt;<br>
-                &lt;div class="col six"&gt;Six&lt;/div&gt;<br>
-                &lt;/div&gt;<br>
-                &lt;div class="row"&gt;<br>
-                &lt;div class="col quarter"&gt;1/4&lt;/div&gt;<br>
-                &lt;div class="col three-quarters"&gt;3/4&lt;/div&gt;<br>
-                &lt;/div&gt;<br>
-                &lt;/div&gt;
-                </code></pre>
-                </div>
-                <div class="col half light">
-                    <p><code>.grid-container</code>
-                        <br> Acts as the centered wrapper with a max width of 1000px.</p>
-                    <p><code>.row</code>
-                        <br> All columns should be the immediate children of a row.</p>
-                    <p><code>.col</code>
-                        <br> Add 'col' and a number and you're all set.</p>
-                </div>
-            </div>
-            <h4 class="dark center">Additional Features</h4>
-            <hr class="two">
-            <div class="row">
-                <div class="col half light">
-                    <p><code>.hero</code>
-                        <br> This is for adding background images that take up 100% of the viewport.</p>
-                    <p><code>.main-container</code>
-                        <br> This can be used for full width background colors for sections, or for your entire page.</p>
-                    <p><code>.col-row</code>
-                        <br> Use this if you'd like to convert a column into a row. You can then place multiple columns inside.
-                        <br><em>Please note that using this will cause your margins to scale.</em></p>
-                </div>
-                <div class="col half light">
-                    <p><code>.flush</code>
-                        <br> Ramshackle adds in padding for each column by default. If you'd like to remove that and tighten things up, add this class to a row, column, or to any other element.</p>
-                    <p><code>.v-25</code> and <code>.v-50</code>
-                        <br> This will add 25px or 50px of vertical margin for when an element needs some room to breathe.</p>
-                    <p><code>.h-25</code> and <code>.h-50</code>
-                        <br> This will add 25px or 50px of horizontal margin for when an element needs some room to stretch.</p>
-                    <p><code>.left</code> <code>.right</code> and <code>.center</code>
-                        <br> When applied to a row it will effect the columns within that row horizontally. When applied to a column it will align the content within it.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a id="color"></a>
-    <div class="main-container">
-        <div class="grid-container">
-            <div class="row">
-                <div class="col full">
-                    <h3 class="primary">Built-In Color Palette</h3>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col half v-flush">
-                    <p>Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location in the included <code>style.css</code>, and then use any of the built in classes to control the text or background color.</p>
-                    <br>
-                    <pre><code>
-                        &lt;div class="bg-primary"&gt;<br>
-                        &nbsp;&nbsp;&lt;h4 class="secondary"&gt;Secondary Heading&lt;/h4&gt;<br>
-                        &lt;/div&gt;
-                    </code></pre>
-                    <br>
-                    <h6>Result:</h6>
-                    <div class="bg-primary result">
-                        <h4 class="secondary">Secondary Heading</h4>
-                    </div>
-                </div>
-                <div class="col-row four">
-                    <div class="row">
-                        <div class="col half primary v-flush">
-                            <h6>Backgrounds</h6>
-                        </div>
-                        <div class="col half primary v-flush">
-                            <h6>Text Colors</h6>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col half outline bg-dark light">.bg-dark</div>
-                        <div class="col half bg-light dark">.dark</div>
-                    </div>
-                    <div class="row">
-                        <div class="col half bg-light">.bg-light</div>
-                        <div class="col half bg-dark light">.light</div>
-                    </div>
-                    <div class="row">
-                        <div class="col half bg-primary light">.bg-primary</div>
-                        <div class="col half bg-dark primary">.primary</div>
-                    </div>
-                    <div class="row">
-                        <div class="col half bg-secondary light">.bg-secondary</div>
-                        <div class="col half bg-dark secondary">.secondary</div>
-                    </div>
-                    <div class="row">
-                        <div class="col half bg-accent outline">.bg-accent</div>
-                        <div class="col half bg-dark accent">.accent</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a id="type"></a>
-    <div class="main-container">
-        <div class="grid-container">
-            <div class="row">
-                <div class="col half">
-                    <h3 class="primary">Typography</h3>
-                    <hr>
-                    <p>The main body typeface is Open Sans, and the headings and buttons are Raleway, both provided by Google Fonts.</p>
-                    <div class="col eight bg-secondary primary center">
-                        <h1>Head 1</h1>
-                        <h2>Head 2</h2>
-                        <h3>Head 3</h3>
-                        <h4>Head 4</h4>
-                        <h5>Head 5</h5>
-                        <h6>Head 6</h6>
-                    </div>
-                </div>
-                <div class="col half">
-                    <h3 class="primary">Buttons</h3>
-                    <hr>
-                    <p>Buttons come in 2 styles. Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> for a plain button. Or use <code class="dark">.btn-fancy</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
-                    <div class="center v-50">
-                        <h4 class="primary">Plain</h4>
-                        <a class="btn bg-dark" href="#">Button</a>
-                        <a class="btn bg-light dark" href="#">Button</a>
-                        <br>
-                        <a class="btn bg-primary" href="#">Button</a>
-                        <a class="btn bg-secondary" href="#">Button</a>
-                        <br>
-                        <a class="btn outline dark" href="#">Button</a>
-                    </div>
-                    <div class="center v-50">
-                        <h4 class="primary">Fancy</h4>
-                        <a class="btn-fancy bg-dark" href="#">Button</a>
-                        <a class="btn-fancy bg-light dark" href="#">Button</a>
-                        <br>
-                        <a class="btn-fancy bg-primary" href="#">Button</a>
-                        <a class="btn-fancy bg-secondary" href="#">Button</a>
-                        <br>
-                        <a class="btn-fancy dark" href="#">Button</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a id="forms"></a>
-    <div class="grid-container bg-primary dark both-round">
-        <div class="grid-container">
-            <br>
-            <h3 class="light h-25">Forms &amp; Inputs</h3>
-            <hr class="h-25">
-            <br>
-            <div class="row v-flush">
-                <div class="col half">
-                    <label for="email-input">Your e-mail</label>
-                    <br>
-                    <input class="full" type="email" placeholder="you@cooldude.com" id="email-input">
-                </div>
-                <div class="col half">
-                    <label for="select-input">I'm Hungry For...</label>
-                    <br>
-                    <select class="full dark" id="select-input">
-                        <option value="opt-1">Tacos</option>
-                        <option value="opt-2">Many Tacos</option>
-                        <option value="opt-3">Infinite Tacos</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row v-flush">
-                <div class="col">
-                    <label for="message-input">Message</label>
-                    <br>
-                    <textarea class="full" placeholder="What's up?" id="message-input"></textarea>
-                </div>
-            </div>
-            <div class="row v-flush">
-                <div class="col quarter">
-                    <a class="btn bg-dark" href="#">submit</a>
-                    <br>
-                    <br>
-                </div>
-                <div class="col three">
-                    <label><input type="checkbox">Check for Guacamole</label><br>
-                    <label><input type="checkbox">Check for Queso</label>
-                </div>
-                <div class="col three">
-                    <label><input type="radio" name="radio">I like this</label><br>
-                    <label><input type="radio" name="radio">I do not like this</label>
-                </div>
-            </div>
-            <br>
-        </div>
-    </div>
-
-    <footer class="bg-dark accent">
-        <div class="row">
-            <div class="col third">
-                <img class="svg-footer" src="img/logo.svg" alt="Ramshackle Logo">
-                <p>Developed by<br>Daniel Strong &copy;2016</p>
-            </div>
-            <div class="col third divider">
-                <h6 class="primary">Learn Web Development:</h6>
-                <a href="https://www.codecademy.com" target="_blank">Codecademy</a><br>
-                <a href="https://teamtreehouse.com" target="_blank">Treehouse</a><br>
-                <a href="https://www.udemy.com" target="_blank">Udemy</a><br>
-                <a href="https://www.freecodecamp.com" target="_blank">Free Code Camp</a><br>
-                <a href="https://www.reddit.com/r/webdev/" target="_blank">r/webdev</a><br>
-                <a href="https://www.reddit.com/r/web_design" target="_blank">r/web_design</a><br>
-            </div>
-        </div>
-    </footer>
 </div>
+<a id="about"></a>
+<div class="main-container">
+    <div class="grid-container">
+        <div class="row">
+            <div class="col full">
+                <h3 class="primary">About Ramshackle</h3>
+                <hr class="full">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col three">
+                <h5 class="primary">What is this thing?</h5>
+                <p>It's a basic responsive framework with some light styling. It handles the under the hood stuff so you can quickstart a prototype or a simple website in no time. But it might catch on fire. So, there's that.</p> 
+            </div>
+            <div class="col two">
+                <img class="svg-about" src="img/css-fire.svg" alt="A CSS Document on Fire">
+            </div>
+            <div class="col three">
+                <h5 class="primary">Who should use this thing?</h5>
+                <p>I'll be straight with you. I started learning web development about 4 months ago. If you're the kind of person who loves lots of unique <s>bugs</s> features then this is going to be awesome for you.</p>
+            </div>
+            <div class="col two">
+                <img class="svg-about" src="img/grid-fire.svg" alt="A Webpage on Fire">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col three">
+                <h5 class="primary">Why did you build this thing?</h5>
+                <p>I'm an apiring front-end developer that wanted a good project to improve my coding skills, learn responsive design, to have a nice project to add to my portfolio, and a system that I can use to build other sites. That's like 4 birds with 1 stone!</p>
+            </div>
+            <div class="col two">
+                <img class="svg-about" src="img/castle-fire.svg" alt="A Sand Castle on Fire">
+            </div>
+            <div class="col three">
+                <h5 class="primary">Why do you ask so many things?</h5>
+                <p>Because I need some content to fluff up this section of the site.</p>
+            </div>
+            <div class="col two">
+                <img class="svg-about" src="img/question-fire.svg" alt="A Question Bubble on Fire">
+            </div>
+        </div>
+    </div>
+</div>
+<a id="grid"></a>
+<div class="grid-container bg-primary both-round">
+    <div class="grid-container">
+        <div class="row">
+            <div class="col full">
+                <h3 class="secondary">Responsive Grid</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col seven light v-flush">
+                <p>This grid uses a base-10 system with a max width of 1000px. You can add columns in increments of 10 all the way up to 100. It's like the metric system of responsive grids, but also allows for some in-between sizes like 1/4, 1/3, 2/3, and 3/4. The max width can be changed with a single number, and all content should scale proportionally. Ramshackle also uses 2 different media query breakpoints for tablets and smart phones so your content will look great on any device.</p>
+                <p>Go ahead and resize the browser, and take it for a spin.</p>
+            </div>
+            <div class="col three v-flush">
+                <img class="svg-responsive" src="img/responsive-design-symbol.svg" alt="A Computer and Cellphone">
+            </div>
+        </div>
+    </div>
+    <div class="small-grid-container center">
+        <br>
+        <h4 class="dark">Base-10 Sizes</h4>
+        <hr class="two">
+        <br>
+        <div class="e-row">
+            <div class="e-col e-one small-box">10</div>
+            <div class="e-col e-nine small-box">90</div>
+        </div>
+        <div class="e-row">
+            <div class="e-col e-two small-box">20</div>
+            <div class="e-col e-eight small-box">80</div>
+        </div>
+        <div class="e-row">
+            <div class="e-col e-three small-box">30</div>
+            <div class="e-col e-seven small-box">70</div>
+        </div>
+        <div class="e-row">
+            <div class="e-col e-four small-box">40</div>
+            <div class="e-col e-six small-box">60</div>
+        </div>
+        <div class="e-row">
+            <div class="e-col e-five small-box">50</div>
+            <div class="e-col e-five small-box">50</div>
+        </div>
+        <div class="e-row">
+            <div class="e-col e-ten small-box">100</div>
+        </div>
+        <br>
+        <h4 class="dark">In Between Sizes</h4>
+        <hr class="two">
+        <br>
+        <div class="row center">
+            <div class="col e-three-quarters small-box">75</div>
+        </div>
+        <div class="row center">
+            <div class="col e-two-thirds small-box">66</div>
+        </div>
+        <div class="row center">
+            <div class="col e-third small-box">33</div>
+        </div>
+        <a id="syntax"></a>
+        <div class="row center">
+            <div class="col e-quarter small-box">25</div>
+        </div>
+    </div>
+    <div class="small-grid-container center">
+        <br>
+        <h4 class="dark center">The Syntax</h4>
+        <hr class="one">
+        <br>
+        <div class="row">
+            <div class="col half">
+                <pre><code>
+            &lt;div class="grid-container"&gt;<br>
+            &lt;div class="row"&gt;<br>
+            &lt;div class="col four"&gt;Four&lt;/div&gt;<br>
+            &lt;div class="col six"&gt;Six&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;div class="row"&gt;<br>
+            &lt;div class="col quarter"&gt;1/4&lt;/div&gt;<br>
+            &lt;div class="col three-quarters"&gt;3/4&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;/div&gt;
+            </code></pre>
+            </div>
+            <div class="col half light">
+                <p><code>.grid-container</code>
+                    <br> Acts as the centered wrapper with a max width of 1000px.</p>
+                <p><code>.row</code>
+                    <br> All columns should be the immediate children of a row.</p>
+                <p><code>.col</code>
+                    <br> Add 'col' and a number and you're all set.</p>
+            </div>
+        </div>
+        <h4 class="dark center">Additional Features</h4>
+        <hr class="two">
+        <div class="row">
+            <div class="col half light">
+                <p><code>.hero</code>
+                    <br> This is for adding background images that take up 100% of the viewport.</p>
+                <p><code>.main-container</code>
+                    <br> This can be used for full width background colors for sections, or for your entire page.</p>
+                <p><code>.col-row</code>
+                    <br> Use this if you'd like to convert a column into a row. You can then place multiple columns inside.
+                    <br><em>Please note that using this will cause your margins to scale.</em></p>
+            </div>
+            <div class="col half light">
+                <p><code>.flush</code>
+                    <br> Ramshackle adds in padding for each column by default. If you'd like to remove that and tighten things up, add this class to a row, column, or to any other element.</p>
+                <p><code>.v-25</code> and <code>.v-50</code>
+                    <br> This will add 25px or 50px of vertical margin for when an element needs some room to breathe.</p>
+                <p><code>.h-25</code> and <code>.h-50</code>
+                    <br> This will add 25px or 50px of horizontal margin for when an element needs some room to stretch.</p>
+                <p><code>.left</code> <code>.right</code> and <code>.center</code>
+                    <br> When applied to a row it will effect the columns within that row horizontally. When applied to a column it will align the content within it.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="color"></a>
+<div class="main-container">
+    <div class="grid-container">
+        <div class="row">
+            <div class="col full">
+                <h3 class="primary">Built-In Color Palette</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col half v-flush">
+                <p>Take advantage of the built in color palette system to make styling your website super easy. Customize your colors in a single location in the included <code>style.css</code>, and then use any of the built in classes to control the text or background color.</p>
+                <br>
+                <pre><code>
+                    &lt;div class="bg-primary"&gt;<br>
+                    &nbsp;&nbsp;&lt;h4 class="secondary"&gt;Secondary Heading&lt;/h4&gt;<br>
+                    &lt;/div&gt;
+                </code></pre>
+                <br>
+                <h6>Result:</h6>
+                <div class="bg-primary result">
+                    <h4 class="secondary">Secondary Heading</h4>
+                </div>
+            </div>
+            <div class="col-row four">
+                <div class="row">
+                    <div class="col half primary v-flush">
+                        <h6>Backgrounds</h6>
+                    </div>
+                    <div class="col half primary v-flush">
+                        <h6>Text Colors</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col half outline bg-dark light">.bg-dark</div>
+                    <div class="col half bg-light dark">.dark</div>
+                </div>
+                <div class="row">
+                    <div class="col half bg-light">.bg-light</div>
+                    <div class="col half bg-dark light">.light</div>
+                </div>
+                <div class="row">
+                    <div class="col half bg-primary light">.bg-primary</div>
+                    <div class="col half bg-dark primary">.primary</div>
+                </div>
+                <div class="row">
+                    <div class="col half bg-secondary light">.bg-secondary</div>
+                    <div class="col half bg-dark secondary">.secondary</div>
+                </div>
+                <div class="row">
+                    <div class="col half bg-accent outline">.bg-accent</div>
+                    <div class="col half bg-dark accent">.accent</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="type"></a>
+<div class="main-container">
+    <div class="grid-container">
+        <div class="row">
+            <div class="col half">
+                <h3 class="primary">Typography</h3>
+                <hr>
+                <p>The main body typeface is Open Sans, and the headings and buttons are Raleway, both provided by Google Fonts.</p>
+                <div class="col eight bg-dark secondary center">
+                    <h1>Head 1</h1>
+                    <h2>Head 2</h2>
+                    <h3>Head 3</h3>
+                    <h4>Head 4</h4>
+                    <h5>Head 5</h5>
+                    <h6>Head 6</h6>
+                </div>
+            </div>
+            <div class="col half">
+                <h3 class="primary">Buttons</h3>
+                <hr>
+                <p>Buttons come in 2 styles. Add the <code class="dark">.btn</code> class to an anchor <code class="dark">&lt;a&gt;</code> or to a button <code class="dark">&lt;button&gt;</code> for a plain button. Or use <code class="dark">.btn-fancy</code> to add some style to your links. You can also use the above color palette system to change the text and background colors. Leave it blank for a transparent button.</p>
+                <div class="center v-50">
+                    <h4 class="primary">Plain</h4>
+                    <a class="btn bg-dark" href="#">Button</a>
+                    <a class="btn bg-light dark" href="#">Button</a>
+                    <br>
+                    <a class="btn bg-primary" href="#">Button</a>
+                    <a class="btn bg-secondary" href="#">Button</a>
+                    <br>
+                    <a class="btn outline dark" href="#">Button</a>
+                </div>
+                <div class="center v-50">
+                    <h4 class="primary">Fancy</h4>
+                    <a class="btn-fancy bg-dark" href="#">Button</a>
+                    <a class="btn-fancy bg-light dark" href="#">Button</a>
+                    <br>
+                    <a class="btn-fancy bg-primary" href="#">Button</a>
+                    <a class="btn-fancy bg-secondary" href="#">Button</a>
+                    <br>
+                    <a class="btn-fancy dark" href="#">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a id="forms"></a>
+<div class="grid-container bg-primary dark both-round">
+    <div class="grid-container">
+        <br>
+        <h3 class="light h-25">Forms &amp; Inputs</h3>
+        <hr class="h-25">
+        <br>
+        <div class="row v-flush">
+            <div class="col half">
+                <label for="email-input">Your e-mail</label>
+                <br>
+                <input class="full" type="email" placeholder="you@cooldude.com" id="email-input">
+            </div>
+            <div class="col half">
+                <label for="select-input">I'm Hungry For...</label>
+                <br>
+                <select class="full dark" id="select-input">
+                    <option value="opt-1">Tacos</option>
+                    <option value="opt-2">Many Tacos</option>
+                    <option value="opt-3">Infinite Tacos</option>
+                </select>
+            </div>
+        </div>
+        <div class="row v-flush">
+            <div class="col">
+                <label for="message-input">Message</label>
+                <br>
+                <textarea class="full" placeholder="What's up?" id="message-input"></textarea>
+            </div>
+        </div>
+        <div class="row v-flush">
+            <div class="col quarter">
+                <a class="btn bg-dark" href="#">submit</a>
+                <br>
+                <br>
+            </div>
+            <div class="col three">
+                <label><input type="checkbox">Check for Guacamole</label><br>
+                <label><input type="checkbox">Check for Queso</label>
+            </div>
+            <div class="col three">
+                <label><input type="radio" name="radio">I like this</label><br>
+                <label><input type="radio" name="radio">I do not like this</label>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<footer class="bg-dark accent">
+    <div class="row">
+        <div class="col third">
+            <img class="svg-footer" src="img/logo.svg" alt="Ramshackle Logo">
+            <p>Developed by<br>Daniel Strong &copy;2016</p>
+        </div>
+        <div class="col third divider">
+            <h6 class="primary">Learn Web Development:</h6>
+            <a href="https://www.codecademy.com" target="_blank">Codecademy</a><br>
+            <a href="https://teamtreehouse.com" target="_blank">Treehouse</a><br>
+            <a href="https://www.udemy.com" target="_blank">Udemy</a><br>
+            <a href="https://www.freecodecamp.com" target="_blank">Free Code Camp</a><br>
+            <a href="https://www.reddit.com/r/webdev/" target="_blank">r/webdev</a><br>
+            <a href="https://www.reddit.com/r/web_design" target="_blank">r/web_design</a><br>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

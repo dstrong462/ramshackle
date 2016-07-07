@@ -15,52 +15,60 @@ body { color: #000; }
 .dark { color: #353535; }
 .light { color: #fff; }
 .primary { color: #289784; }
-.secondary { color: #84dacb; }
+.secondary { color: #76DDC9; }
 .accent { color: #ececee; }
 
 /* These control your BACKGROUND colors */
 .bg-dark { background-color: #353535; }
 .bg-light { background-color: #fff; }
 .bg-primary { background-color: #289784; }
-.bg-secondary { background-color: #84dacb; }
+.bg-secondary { background-color: #76DDC9; }
 .bg-accent { background-color: #ececee; }
 
 body {
     background-color: #ececee;
-    overflow-x: hidden;
-}
-
-.content {
-    position: relative;
-    top: 0;
-    background-color: #ececee;
-    z-index: 1;
 }
 
 .mobile-nav {
-    visibility: hidden;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 200px;
-    height: 100%;
-    list-style: none;
-    text-align: center;
-    padding: 50px 0 0 0;
+    width: 100vw;
+    max-width: 100%;
+    height: 45px;
+    background-color: #ececee;
+    padding: 0;
     margin: 0;
-    z-index: 0;
+    z-index: 2;
+    transition: .25s ease;
 }
 
-.mobile-nav li a {
+.mobile-nav-list {
+    visibility: hidden;
+    list-style: none;
+    text-align: center;
+    padding: 55px 0 0 0;
+    margin: 0;
+    z-index: 5;
+}
+
+.mobile-nav-list li {
+    margin-bottom: 25px;
+}
+
+.mobile-nav-list a {
     text-decoration: none;
-    color: #353535;
-    font-size: 1em;
-    line-height: 2.5em;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 10px 15px;
+    letter-spacing: 1px;
+    font-size: .9em;
+    color: #fff;
+    padding: 7px 15px;
+}
+
+.mobile-nav-list a:hover {
+    color: #76DDC9;
 }
 
 .nav-toggle {
@@ -80,22 +88,24 @@ label[for="nav-toggle"] {
     cursor: pointer;
     background-image: url('../img/burger.svg');
     background-size: contain;
+    transition: .15s;
 }
 
-.nav-toggle:checked ~ .content {
-    left: 200px;
-    box-shadow: -7px 0 15px rgba(0,0,0,.35);
+.nav-toggle:checked ~ label[for="nav-toggle"] {
+    top: 12px;
+    left: 12px;
+    width: 21px;
+    height: 21px;
+    background-image: url('../img/burger-x.svg');
 }
 
-.mobile-nav-bar {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 45px;
-    background-color: #ececee;
+.nav-toggle:checked ~ .mobile-nav {
+    height: 100vh;
+    background-color: #289784;
+}
+
+.nav-toggle:checked ~ .mobile-nav .mobile-nav-list a {
+    visibility: visible;
 }
 
 #navbar {
@@ -136,7 +146,7 @@ label[for="nav-toggle"] {
 }
 
 #navbar ul li a:hover {
-    color: #289784;
+    color: #76DDC9;
 }
 
 .header {
@@ -217,7 +227,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #84dacb;
+    color: #76DDC9;
 }
 
 .divider {
@@ -274,7 +284,6 @@ footer a:hover {
 
 @media (max-width: 480px) {
     .mobile-nav,
-    .mobile-nav-bar,
     #nav-toggle,
     label[for="nav-toggle"] { visibility: visible !important; }
     #navbar { display: none !important; }
