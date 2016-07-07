@@ -49,7 +49,7 @@ body {
     visibility: hidden;
     list-style: none;
     text-align: center;
-    padding: 55px 0 0 0;
+    padding: 75px 0 0 0;
     margin: 0;
     z-index: 5;
 }
@@ -62,7 +62,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 1em;
+    font-size: 1.1em;
     color: #fff;
     padding: 7px 15px;
 }
