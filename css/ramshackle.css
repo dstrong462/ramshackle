@@ -390,13 +390,19 @@ li {
 
 /* For screens smaller than 768px wide */
 @media (min-width: 481px) and (max-width: 768px) {
-    .grid-container {
-        width: 98%;
-        margin: 0 auto;
-    }
+    .grid-container { width: 98%; }
     .row { margin: 0 auto; }
-    .col-row { margin: 0 auto; }
+    .col-row {
+        max-width: 98%;
+        float: none;
+        margin: 0 auto; }
     .col { margin: 1% auto; }
+    h1 { font-size: 3.6em; }
+    h2 { font-size: 3.1em; }
+    h3 { font-size: 2.6em; }
+    h4 { font-size: 2.1em; }
+    h5 { font-size: 1.6em; }
+    h6 { font-size: 1.1em; }
 }
 
 /* For screens smaller than 480px wide */
@@ -407,7 +413,11 @@ li {
         margin: 0;
     }
     .row { margin: 0 auto; }
-    .col-row { margin: 0 auto; }
+    .col-row {
+        max-width: 98%;
+        float: none;
+        margin: 0 auto;
+    }
     .col { margin: 2% auto; }
     h1 { font-size: 3.4em; }
     h2 { font-size: 2.9em; }
