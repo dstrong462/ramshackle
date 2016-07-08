@@ -98,6 +98,7 @@ label[for="nav-toggle"] {
 
 .nav-toggle:checked ~ .mobile-nav {
     height: 100vh;
+    bottom: 0;
     background-color: #289784;
 }
 
