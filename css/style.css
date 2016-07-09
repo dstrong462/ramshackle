@@ -248,6 +248,19 @@ footer a:hover {
     border-left: 10px solid #ececee;
 }
 
+/*  MISC ITEMS
+================================== */
+
+.top-round { border-radius: 15px 15px 0 0; }
+.bottom-round { border-radius: 0 0 15px 15px; }
+.both-round { border-radius: 15px; }
+
+.e-row {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 /*  EXAMPLE GRID
 ================================== */
 
@@ -319,17 +332,4 @@ footer a:hover {
     .bottom-round,
     .both-round { border-radius: 0; }
     .divider { border-left: none; }
-}
-
-/*  MISC ITEMS
-================================== */
-
-.top-round { border-radius: 15px 15px 0 0; }
-.bottom-round { border-radius: 0 0 15px 15px; }
-.both-round { border-radius: 15px; }
-
-.e-row {
-    content: '';
-    display: table;
-    clear: both;
 }
