@@ -265,6 +265,8 @@ option {
 input[type='checkbox'],
 input[type='radio'] {
     margin-right: 15px;
+    display: inline-block !important;
+    outline: 1px solid yellow;
 }
 
 label {
@@ -393,9 +395,9 @@ li {
     .grid-container { width: 98%; }
     .row { margin: 0 auto; }
     .col-row {
-        max-width: 98%;
-        float: none;
-        margin: 0 auto; }
+        padding: 25px;
+        margin: 0 auto;
+    }
     .col { margin: 1% auto; }
     h1 { font-size: 3.6em; }
     h2 { font-size: 3.1em; }
@@ -403,6 +405,16 @@ li {
     h4 { font-size: 2.1em; }
     h5 { font-size: 1.6em; }
     h6 { font-size: 1.1em; }
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    textarea,
+    select,
+    option { width: 100%; }
 }
 
 /* For screens smaller than 480px wide */
@@ -414,8 +426,7 @@ li {
     }
     .row { margin: 0 auto; }
     .col-row {
-        max-width: 98%;
-        float: none;
+        padding: 25px;
         margin: 0 auto;
     }
     .col { margin: 2% auto; }
@@ -425,4 +436,15 @@ li {
     h4 { font-size: 2em; }
     h5 { font-size: 1.4em; }
     h6 { font-size: 1em; }
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    textarea,
+    select,
+    option { width: 100%; }
+
 }
