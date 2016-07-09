@@ -1,10 +1,10 @@
 
 /*
-Ramshackle v0.9.2
+Ramshackle v0.9.3
 Copyright 2016, Daniel Strong
 www.getramshackle.com
 Free to use under the MIT license.
-7/4/2016
+7/8/2016
 */
 
 /*  TABLE OF CONTENTS
@@ -265,8 +265,6 @@ option {
 input[type='checkbox'],
 input[type='radio'] {
     margin-right: 15px;
-    display: inline-block !important;
-    outline: 1px solid yellow;
 }
 
 label {
@@ -429,7 +427,7 @@ li {
         padding: 25px;
         margin: 0 auto;
     }
-    .col { margin: 2% auto; }
+    .col { margin: 1% auto; }
     h1 { font-size: 3.4em; }
     h2 { font-size: 2.9em; }
     h3 { font-size: 2.4em; }
@@ -446,5 +444,4 @@ li {
     textarea,
     select,
     option { width: 100%; }
-
 }

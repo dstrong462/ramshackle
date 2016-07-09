@@ -97,7 +97,7 @@ label[for="nav-toggle"] {
 }
 
 .nav-toggle:checked ~ .mobile-nav {
-    bottom: inherit;
+    bottom: 0;
     height: 100%;
     background-color: #289784;
 }
