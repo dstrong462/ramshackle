@@ -29,6 +29,9 @@ body {
     background-color: #ececee;
 }
 
+/*  MOBILE NAV BAR
+================================== */
+
 .mobile-nav {
     position: fixed;
     top: inherit;
@@ -105,6 +108,11 @@ label[for="nav-toggle"] {
     visibility: visible;
 }
 
+.disable-scroll { overflow: hidden; }
+
+/*  DESKTOP & TABLET NAV BAR
+================================== */
+
 #navbar {
     position: fixed;
     cursor: default;
@@ -146,6 +154,9 @@ label[for="nav-toggle"] {
     color: #76DDC9;
 }
 
+/*  INTRO HEADER
+================================== */
+
 .header {
     background-image:
         linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(40,151,132,.5) 100%),
@@ -155,11 +166,6 @@ label[for="nav-toggle"] {
     background-position: left bottom;
     text-align: center;
 }
-
-.top-round { border-radius: 15px 15px 0 0; }
-.bottom-round { border-radius: 0 0 15px 15px; }
-.both-round { border-radius: 15px; }
-
 
 #intro {
     max-width: 515px;
@@ -177,10 +183,16 @@ label[for="nav-toggle"] {
     color: #ececee;
 }
 
+/*  ABOUT SECTION
+================================== */
+
 .svg-about {
     max-width: 150px;
     margin: 0 auto;
 }
+
+/*  GRID SECTION
+================================== */
 
 .svg-responsive {
     max-width: 230px;
@@ -202,9 +214,15 @@ label[for="nav-toggle"] {
     padding: 7px;
 }
 
+/*  COLOR PALETTE SECTION
+================================== */
+
 .result { padding: 10px; }
 
 .outline { border: 1px solid #ccc; }
+
+/*  FOOTER
+================================== */
 
 footer {
     width: 100%;
@@ -229,6 +247,9 @@ footer a:hover {
 .divider {
     border-left: 10px solid #ececee;
 }
+
+/*  EXAMPLE GRID
+================================== */
 
 /* Single use row and col that are exempt from media queries */
 .e-row {
@@ -266,7 +287,8 @@ footer a:hover {
 .e-three-quarters { width: 74.5%; }
 .e-full { width: 100%; margin-left: 0; margin-right: 0; }
 
-
+/*  MEDIA QUERIES
+================================== */
 
 @media (min-width: 481px) and (max-width: 768px) {
     #navbar ul li {
@@ -298,6 +320,13 @@ footer a:hover {
     .both-round { border-radius: 0; }
     .divider { border-left: none; }
 }
+
+/*  MISC ITEMS
+================================== */
+
+.top-round { border-radius: 15px 15px 0 0; }
+.bottom-round { border-radius: 0 0 15px 15px; }
+.both-round { border-radius: 15px; }
 
 .e-row {
     content: '';
