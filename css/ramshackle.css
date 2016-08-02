@@ -1,17 +1,19 @@
+
 /*
-* Ramshackle v0.8
-* Copyright 2016, Daniel Strong
-* www.getramshackle.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 6/22/2016
+Ramshackle v0.9.4
+Copyright 2016, Daniel Strong
+www.getramshackle.com
+Free to use under the MIT license.
+8/2/2016
 */
 
 /*  TABLE OF CONTENTS
 ==================================
 
 - Blanket Settings
+- Outlines for Troubleshooting
 - The Grid
+- Positioning
 - Default Element Styling
 - Type Styling
 - Buttons
@@ -20,41 +22,21 @@
 - Lists
 - Misc Tools
 - Clearfix
-- Grid Styling
 - Media Queries
-- Font Declarations
-- Color Palette
 
 ================================ */
 
 /*  BLANKET SETTINGS
 ================================ */
 
-* { box-sizing: border-box; }
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
+*, *:before, *:after { box-sizing: border-box; }
 
 /*  OUTLINES FOR TROUBLESHOOTING
 ================================== */
 
-/*.main-container { outline: 1px solid yellow; }*/
 /*.grid-container { outline: 1px solid green; }
 .row { outline: 1px solid blue; }
 .col { outline: 1px solid red; }*/
-
-/*  SINGLE USE THINGS
-================================== */
-
-.splash {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    background: radial-gradient(ellipse at center, #fafafa 0%, #cacaca 100%);
-    text-align: center;
-    margin: 0 auto;
-}
 
 /*  THE GRID
 ================================== */
@@ -63,7 +45,7 @@
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    /*background-image: url('../img/photo-1453227588063-bb302b62f50b.jpg');*/
+    /*background-image: url('../img/');*/
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -71,6 +53,7 @@
 }
 
 .main-container {
+    position: relative;
     width: 100%;
     padding: 50px 0;
     margin: 0 auto;
@@ -86,6 +69,7 @@
 }
 
 .row {
+    position: relative;
     width: 100%;
     padding: 0;
     margin: 2% 0;
@@ -95,6 +79,7 @@
     float: left;
     width: 100%;
     text-align: left;
+    vertical-align: top;
     padding: 25px;
     margin: 0 2% 0 0;
 }
@@ -111,39 +96,66 @@
 .col:first-child { margin-left: 0; }
 .col:last-child { margin-right: 0; }
 
-/* Use on an element to align content to CENTER */
-.center {
+/*  POSITIONING
+================================== */
+
+/* Use 'center' on a row to align its columns */
+.row.center {
     text-align: center;
-    vertical-align: top;
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Use on a row to align columns to CENTER */
-.center .col {
-    display: inline-block;
+.row.center .col {
     float: none;
-}
-
-/* Use on an element to align content to LEFT */
-.left {
-    text-align: left;
-}
-
-/* Use on a row to align columns to LEFT */
-.left .col {
     display: inline-block;
+}
+
+/* Use 'center' on a column to align its content */
+div.center {
+    text-align: center;
+}
+
+/* Use 'left' on a row to align its columns */
+.left .col {
     float: left;
 }
 
-/* Use on an element to align content to RIGHT */
-.right {
-    text-align: right;
+/* Use 'left' on a column to align its content */
+.left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+.left * {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
 }
 
-/* Use on a row to align columns to RIGHT */
+/* Use 'pull-left' on an element to float it left */
+.pull-left {
+    float: left;
+}
+
+/* Use 'right' on a row to align its columns */
 .right .col {
-    display: inline-block;
+    float: right;
+}
+
+/* Use 'right' on a column to align its content */
+.right {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+.right * {
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Use 'pull-right' on an element to float it right */
+.pull-right {
     float: right;
 }
 
@@ -153,11 +165,6 @@
 body {
     font-size: 1em;
     line-height: 1.7em;
-}
-
-hr {
-    border-width: 0;
-    border-top: 1px solid #fafafa;
 }
 
 img {
@@ -175,7 +182,7 @@ svg {
 ================================== */
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: normal;
     line-height: 1.3em;
     margin: 0 0 .4em 0;
 }
@@ -190,7 +197,35 @@ h6 { font-size: 1.3em; }
 /*  BUTTONS
 ================================== */
 
-.button {
+.btn {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: .8em;
+    letter-spacing: .22em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 12px 36px;
+    margin: 5px 0;
+}
+
+.btn:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.05);
+}
+
+.btn-fancy {
+    position: relative;
     display: inline-block;
     color: #fff;
     font-size: .85em;
@@ -199,28 +234,29 @@ h6 { font-size: 1.3em; }
     text-decoration: none;
     text-transform: uppercase;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 4px;
     outline: 0;
     box-shadow: 0 0 15px rgba(0,0,0,.22);
     padding: 17px 45px;
     margin: 5px;
-    transition: .25s;
 }
 
-.button:hover {
-    animation: pulse 1s ease-out infinite;
+.btn-fancy:hover {
+    -webkit-animation: pulse 1s ease-out infinite;
+            animation: pulse 1s ease-out infinite;
     box-shadow: 0 0 10px rgba(255,255,255, .5) inset;
 }
 
-@keyframes pulse {
-    0% { color: #fff; }
+@-webkit-keyframes pulse {
     40% { color: rgba(255,255,255,.2); }
-    85% { color: #fff; }
-    100% { color: #fff; }
 }
 
-/*  FORMS AND INPUTS
+@keyframes pulse {
+    40% { color: rgba(255,255,255,.2); }
+}
+
+/*  FORMS & INPUTS
 ================================== */
 
 input[type='email'],
@@ -231,15 +267,23 @@ input[type='tel'],
 input[type='text'],
 input[type='url'],
 textarea,
-select {
+select,
+option {
     box-sizing: border-box;
+    width: 100%;
+    height: 40px;
     box-shadow: none;
-    font-size: 1.15em;
+    font-size: 1em;
     background-color: #fafafa;
-    border: 1px solid #aaa;
+    border: none;
     border-radius: 4px;
     padding: 6px 12px;
-    margin: 4px 0 0 0;
+    margin: 3px 0 0 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin-right: 15px;
 }
 
 label {
@@ -248,7 +292,6 @@ label {
     cursor: default;
     margin-left: 2px;
 }
-
 
 textarea {
     min-height: 100px;
@@ -267,13 +310,13 @@ code {
     background-color: #dedede;
     border-radius: 4px;
     padding: .1em .6em;
-    margin: .15em .3em;
+    margin: .1em 0;
 }
 
 pre > code {
     display: inline-block;
     word-wrap: break-word;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 /*  LISTS
@@ -301,7 +344,7 @@ li {
     margin-bottom: 50px;
 }
 
-/* These give elements some horizontal room to breathe */
+/* These give elements some horizontal room to stretch */
 .h-25 {
     margin-left: 25px;
     margin-right: 25px;
@@ -312,40 +355,34 @@ li {
     margin-right: 50px;
 }
 
+/* These tighten things up a bit */
 .flush {
     padding: 0;
 }
 
-.v-flush {
+.v-flush,
+.v-flush .col {
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.h-flush {
+.h-flush,
+.h-flush .col {
     padding-left: 0;
     padding-right: 0;
 }
 
-/*  CLEAR FIX
+/*  CLEARFIX
 ================================ */
 
+.clearfix,
 .main-container,
 .grid-container,
-.row,
-.center,
-.left,
-.right {
+.large-container,
+.row {
     content: '';
     display: table;
     clear: both;
-}
-
-/*  GRID STYLING
-================================== */
-
-.box {
-    background-color: #fafafa;
-    box-shadow: 0 0 15px rgba(0,0,0,.25);
 }
 
 /*  MEDIA QUERY BREAKPOINTS
@@ -374,13 +411,29 @@ li {
 
 /* For screens smaller than 768px wide */
 @media (min-width: 481px) and (max-width: 768px) {
-    .grid-container {
-        width: 98%;
+    .grid-container { width: 98%; }
+    .row { margin: 0 auto; }
+    .col-row {
+        padding: 25px;
         margin: 0 auto;
     }
-    .row { margin: 0 auto; }
-    .col-row { margin: 0 auto; }
     .col { margin: 1% auto; }
+    h1 { font-size: 3.6em; }
+    h2 { font-size: 3.1em; }
+    h3 { font-size: 2.6em; }
+    h4 { font-size: 2.1em; }
+    h5 { font-size: 1.6em; }
+    h6 { font-size: 1.1em; }
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    textarea,
+    select,
+    option { width: 100%; }
 }
 
 /* For screens smaller than 480px wide */
@@ -391,59 +444,25 @@ li {
         margin: 0;
     }
     .row { margin: 0 auto; }
-    .col-row { margin: 0 auto; }
-    .col { margin: 2% auto; }
+    .col-row {
+        padding: 25px;
+        margin: 0 auto;
+    }
+    .col { margin: 1% auto; }
     h1 { font-size: 3.4em; }
     h2 { font-size: 2.9em; }
     h3 { font-size: 2.4em; }
     h4 { font-size: 2em; }
     h5 { font-size: 1.4em; }
     h6 { font-size: 1em; }
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    textarea,
+    select,
+    option { width: 100%; }
 }
-
-/*  FONT DECLARATIONS
-================================== */
-
-* { font-family: 'Open Sans', sans-serif; }
-
-h1, h2, h3, h4, h5, h6, button {
-    font-family: 'Raleway', sans-serif;
-}
-
-/*  COLOR PALETTE
-================================== */
-
-/* These control your TEXT colors */
-/*body { color: #424242; }
-.dark { color: #424242; }
-.light { color: #dedede; }
-.primary { color: #ff5f66; }
-.secondary { color: #ffbc55; }
-.accent { color: #66abf7; }
-
-/* These control your BACKGROUND colors */
-/*.bg-dark { background-color: #424242; }
-.bg-light { background-color: #dedede; }
-.bg-primary { background-color: #ff5f66; }
-.bg-secondary { background-color: #ffbc55; }
-.bg-accent { background-color: #66abf7; }*/
-
-/* These control the fill of your inline SVG images */
-/*.svg-dark { fill: #424242; }
-.svg-light { fill: #dedede; }
-.svg-primary { fill: #ff5f66; }
-.svg-secondary { fill: #ffbc55; }
-.svg-accent { fill: #66abf7; }*/
-
-/*.orange-red-grad {
-    box-sizing: padding-box;
-    background: linear-gradient(#ffbc55, #ff5f66);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}*/
-
-
-/*
-add font weight 600 for open sans
-
-*/
